@@ -7,13 +7,15 @@
 //
 
 import UIKit
-import SwiftyJSON
 
-class ViewController: UIViewController, UIPageViewControllerDataSource {
+class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
-    var pageImages: NSArray!
-    var pageTitles: NSArray!
+    var pageImages: NSArray! = []
+    var pageTitles: NSArray! = []
     var pageViewController: UIPageViewController!
+    var count = 0
+    var JsonEntity: Entity = Entity(path: NSBundle.mainBundle().pathForResource("jsonFile", ofType: "json") as String!)
+    let imagesArray: NSMutableArray! = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,14 +23,19 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         self.pageTitles = parseJSONTitles()
         self.pageImages = parseJSONImages()
         
-        self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController
+        for i in 0...self.JsonEntity.readableJSON.count-1 {
+            if let url = NSURL(string: self.JsonEntity.readableJSON[i]["images"][0].string as String!),
+                data = NSData(contentsOfURL: url){
+                    imagesArray.addObject(UIImage(data: data)!)
+                    NSLog("image loaded")
+            }
+        }
         
+        self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController
         self.pageViewController.dataSource = self
         
         let initialContenViewController = self.pageTutorialAtIndex(0) as PageContentHolderViewController
-        
         let viewControllers = NSArray(object: initialContenViewController)
-        
         
         self.pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
         
@@ -37,33 +44,25 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         self.addChildViewController(self.pageViewController)
         self.view.addSubview(self.pageViewController.view)
         self.pageViewController.didMoveToParentViewController(self)
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     
     func pageTutorialAtIndex(index: Int) -> PageContentHolderViewController
     {
-        let path: String = NSBundle.mainBundle().pathForResource("jsonFile", ofType: "json") as String!
-        let jsonData = NSData(contentsOfFile: path) as NSData!
-        let readableJSON = JSON(data: jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil)
         let titles = NSMutableArray()
-        let nbImages = readableJSON[index]["sources"].count
-        
-        for j in 0...nbImages-1{
-            titles.addObject(readableJSON[index]["sources"][j]["image"].string as String!)
+        for j in 0...self.JsonEntity.countImagesSources(index)-1{
+            titles.addObject(self.JsonEntity.readableJSON[index]["sources"][j]["image"].string as String!)
         }
 
-        
         let pageContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageContentHolderViewController") as! PageContentHolderViewController
         
-        pageContentViewController.textArticle = readableJSON[index]["text"].string! as String
-        pageContentViewController.imageFileName = pageImages[index] as! String
-        pageContentViewController.titleText = pageTitles[index] as! String
+        pageContentViewController.textArticle = self.JsonEntity.readableJSON[index]["text"].string! as String
+        pageContentViewController.imageFileName = self.imagesArray[index] as! UIImage
+        pageContentViewController.titleText = pageTitles![index] as! String
         pageContentViewController.sourceImageName = titles as NSArray
         pageContentViewController.pageIndex = index
         
@@ -98,7 +97,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         
         index++
         
-        if(index == pageImages.count)
+        if(index == pageImages!.count)
         {
             return nil
         }
@@ -108,7 +107,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
 
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return pageImages.count
+        return pageImages!.count
     }
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
@@ -117,28 +116,22 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
     
     
     func parseJSONTitles() -> NSMutableArray{
-        let path: String = NSBundle.mainBundle().pathForResource("jsonFile", ofType: "json") as String!
-        let jsonData = NSData(contentsOfFile: path) as NSData!
-        let readableJSON = JSON(data: jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil)
-        let nb = readableJSON.count
+        let nb = self.JsonEntity.readableJSON.count
         let titles = NSMutableArray()
         
         for i in 0...nb-1 {
-            titles.addObject(readableJSON[i]["articles"][0].string as String!)
+            titles.addObject(self.JsonEntity.readableJSON[i]["articles"][0].string as String!)
         }
         
         return titles
     }
     
     func parseJSONImages() -> NSMutableArray{
-        let path: String = NSBundle.mainBundle().pathForResource("jsonFile", ofType: "json") as String!
-        let jsonData = NSData(contentsOfFile: path) as NSData!
-        let readableJSON = JSON(data: jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil)
-        let nb = readableJSON.count
+        let nb = self.JsonEntity.readableJSON.count
         let titles = NSMutableArray()
         
         for i in 0...nb-1 {
-            titles.addObject(readableJSON[i]["images"][0].string as String!)
+            titles.addObject(self.JsonEntity.readableJSON[i]["images"][0].string as String!)
         }
         
         return titles

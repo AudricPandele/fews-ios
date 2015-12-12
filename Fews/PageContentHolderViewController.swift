@@ -17,50 +17,63 @@ class PageContentHolderViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var nbOfSourceLeftLabel: UILabel!
     
-    var imageFileName: String!
+    var imageFileName: UIImage!
     var sourceImageName: NSArray!
     var titleText: String!
     var pageIndex: Int!
     var textArticle: String!
     
-    
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()        
+        
+        self.imageView.image = self.imageFileName
+        self.titleLabel.alpha = 0.1
+        self.titleLabel.text = self.titleText
         
         let nbOfSources = self.sourceImageName.count
         let nbOfSourcesLeft = nbOfSources - 3
-        
-        if let url  = NSURL(string: self.imageFileName),
-            data = NSData(contentsOfURL: url)
-        {
-            imageView.image = UIImage(data: data)
-        }
-        
-        
-        if (nbOfSources >= 1){
-            if let url  = NSURL(string: self.sourceImageName[0] as! String),
-                data = NSData(contentsOfURL: url)
-            {
-                imageSource.image = UIImage(data: data)
-            }
-        }
-        
-        if (nbOfSources >= 2){
-            if let url  = NSURL(string: self.sourceImageName[1] as! String),
-                data = NSData(contentsOfURL: url)
-            {
-                imageSource2.image = UIImage(data: data)
-            }
-        }
-        
-        if (nbOfSources >= 3){
-            if let url  = NSURL(string: self.sourceImageName[2] as! String),
-                data = NSData(contentsOfURL: url)
-            {
-                imageSource3.image = UIImage(data: data)
-            }
 
-        }
+        UI.animateWithDuration(1.0, animations: { () -> Void in
+            self.titleLabel.alpha = 1.0
+        })
+        
+        
+//        if (nbOfSources >= 1){
+//            NSOperationQueue().addOperationWithBlock {
+//            if let url  = NSURL(string: self.sourceImageName[0] as! String),
+//                data = NSData(contentsOfURL: url)
+//            {
+//                NSOperationQueue.mainQueue().addOperationWithBlock {
+//                self.imageSource.image = UIImage(data: data)
+//                }
+//            }
+//            }
+//        }
+//        
+//        if (nbOfSources >= 2){
+//            NSOperationQueue().addOperationWithBlock {
+//            if let url  = NSURL(string: self.sourceImageName[1] as! String),
+//                data = NSData(contentsOfURL: url)
+//            {
+//                NSOperationQueue.mainQueue().addOperationWithBlock {
+//                    self.imageSource2.image = UIImage(data: data)
+//                }
+//            }
+//            }
+//        }
+//        
+//        if (nbOfSources >= 3){
+//            NSOperationQueue().addOperationWithBlock {
+//            if let url  = NSURL(string: self.sourceImageName[2] as! String),
+//                data = NSData(contentsOfURL: url)
+//            {
+//                NSOperationQueue.mainQueue().addOperationWithBlock {
+//                    self.imageSource3.image = UIImage(data: data)
+//                }
+//            }
+//        }
+
+//}
         
         self.titleLabel.text = self.titleText
         
@@ -81,7 +94,7 @@ class PageContentHolderViewController: UIViewController {
         if let destinationVC = segue.destinationViewController as? ArticleViewController{
             
             destinationVC.titleArticle = self.titleText
-            destinationVC.imageArticle = self.imageFileName
+            //destinationVC.imageArticle = self.imageFileName
             destinationVC.textArticle = self.textArticle
         }
         
@@ -97,6 +110,10 @@ class PageContentHolderViewController: UIViewController {
 //        let appdelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 //        
 //        appdelegate.window?.rootViewController = nextView
+    }
+    
+    @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
+        NSLog("ok")
     }
 
 }

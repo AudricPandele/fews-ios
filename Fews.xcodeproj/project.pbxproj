@@ -19,6 +19,7 @@
 		82A8DA6D1C184E2200799225 /* jsonFile.json in Resources */ = {isa = PBXBuildFile; fileRef = 82A8DA6C1C184E2200799225 /* jsonFile.json */; };
 		82BFFADD1C18843500999325 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BFFADC1C18843500999325 /* ScrollViewController.swift */; };
 		D553BB9CF973668EC58E91CF /* Pods_Fews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2EA6F4D8A56272EC74C0890 /* Pods_Fews.framework */; };
+		EB3C5F491C1C782C004C7C13 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C5F481C1C782C004C7C13 /* Entity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,9 +36,10 @@
 		82A8DA641C18309E00799225 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		82A8DA661C1834B000799225 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		82A8DA6A1C18447F00799225 /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
-		82A8DA6C1C184E2200799225 /* jsonFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = jsonFile.json; path = ../../../../../../Downloads/jsonFile.json; sourceTree = "<group>"; };
+		82A8DA6C1C184E2200799225 /* jsonFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = jsonFile.json; path = ../jsonFile.json; sourceTree = "<group>"; };
 		82BFFADC1C18843500999325 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		E2EA6F4D8A56272EC74C0890 /* Pods_Fews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB3C5F481C1C782C004C7C13 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		82A8DA4B1C18247B00799225 /* Fews */ = {
 			isa = PBXGroup;
 			children = (
+				EB3C5F471C1C7778004C7C13 /* models */,
 				82A8DA6C1C184E2200799225 /* jsonFile.json */,
 				82A8DA4C1C18247B00799225 /* AppDelegate.swift */,
 				82A8DA4E1C18247B00799225 /* ViewController.swift */,
@@ -105,6 +108,14 @@
 				82A8DA581C18247B00799225 /* Info.plist */,
 			);
 			path = Fews;
+			sourceTree = "<group>";
+		};
+		EB3C5F471C1C7778004C7C13 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				EB3C5F481C1C782C004C7C13 /* Entity.swift */,
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +153,7 @@
 				TargetAttributes = {
 					82A8DA481C18247B00799225 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = SF6BSG34CG;
+						DevelopmentTeam = T6RB53DB8F;
 					};
 				};
 			};
@@ -234,6 +245,7 @@
 			files = (
 				82A8DA4F1C18247B00799225 /* ViewController.swift in Sources */,
 				82A8DA611C1828AA00799225 /* PageContentHolderViewController.swift in Sources */,
+				EB3C5F491C1C782C004C7C13 /* Entity.swift in Sources */,
 				82BFFADD1C18843500999325 /* ScrollViewController.swift in Sources */,
 				82A8DA6B1C18447F00799225 /* ArticleViewController.swift in Sources */,
 				82A8DA4D1C18247B00799225 /* AppDelegate.swift in Sources */,
@@ -350,14 +362,17 @@
 			baseConfigurationReference = 0DE6EA55EB562B8ABD249310 /* Pods-Fews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = Fews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = audric.Fews;
+				PRODUCT_BUNDLE_IDENTIFIER = clement.Fews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -366,14 +381,17 @@
 			baseConfigurationReference = 6B439C6B6936200BF5DC0F75 /* Pods-Fews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = Fews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = audric.Fews;
+				PRODUCT_BUNDLE_IDENTIFIER = clement.Fews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
