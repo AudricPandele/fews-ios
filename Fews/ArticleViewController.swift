@@ -21,11 +21,11 @@ class ArticleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let url  = NSURL(string: self.imageArticle),
-            data = NSData(contentsOfURL: url)
-        {
-            imageView.image = UIImage(data: data)
-        }
+//        if let url  = NSURL(string: self.imageArticle),
+//            data = NSData(contentsOfURL: url)
+//        {
+//            imageView.image = UIImage(data: data)
+//        }
         
         articleTextLabel.text = textArticle
         titleArticleLabel.text = titleArticle

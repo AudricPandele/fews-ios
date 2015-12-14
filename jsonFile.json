@@ -24,12 +24,12 @@
     "http://blogs-images.forbes.com/theopriestley/files/2015/11/rsz_img_4054-1200x837.jpg"
   ],
   "sources": [
-    { "title": "TechCrunch", "image": "https://fews.io/static/img/websites/techcrunch.png"},
-    { "title": "Mashable", "image": "https://fews.io/static/img/websites/mashable.png" },
-    { "title": "Forbes", "image": "https://fews.io/static/img/websites/forbestech.png" },
-    { "title": "TechCrunch", "image": "https://fews.io/static/img/websites/techcrunch.png"},
-    { "title": "Mashable", "image": "https://fews.io/static/img/websites/mashable.png" },
-    { "title": "Forbes", "image": "https://fews.io/static/img/websites/forbestech.png" }
+    { "title": "TechCrunch", "image": "https://fews.io/static/img/websites/usatoday.jpg"},
+    { "title": "Mashable", "image": "https://fews.io/static/img/websites/mashable.jpg" },
+    { "title": "Forbes", "image": "https://fews.io/static/img/websites/forbes.jpg" },
+    { "title": "TechCrunch", "image": "https://fews.io/static/img/websites/techcrunch.jpg"},
+    { "title": "Mashable", "image": "https://fews.io/static/img/websites/mashable.jpg" },
+    { "title": "Forbes", "image": "https://fews.io/static/img/websites/forbes.jpg" }
   ],
  "text": "The Raspberry Pi Foundation has upped the ante when it comes to low cost single board computers, announcing a new addition to its family of microprocessors today, called Pi Zero. And it costs…  just $5. (£4 in the U.K.) Or it should cost $5, albeit you may have to shop around the various Pi resellers to get it for that baseline price. And international buyers in certain regions may find they’re still paying a premium. But the Foundation’s intention is for the Pi Zero to retail for just five bucks. “We really hope this is going to get those last few people in the door and involved in computer programming,” says Pi co-founder Eben Upton in a video (embedded below) announcing the Pi Zero. So who is the Pi Zero for? Makers building connected devices and robotics projects are likely to be first in line in the queue here. Albeit, at $5 it’s pretty much an impulse purchase… (Indeed, the Pi Zero is being given away free on the cover of the Foundation’s MagPi magazine.) Pi Zero “We believe it will be particularly useful for people looking to do robotics or IoT projects — very small and low power, but able to drive a display and keyboard when you want to do debug,” Upton tells TechCrunch. The next cheapest Pi in the family is the Model A+ which costs $20. While this fall a Raspberry Pi rival/clone, called Orange Pi, also popped up, retailing for $15 so there’s no doubt that low cost computers are getting increasingly affordable. Whether $5 is the floor for a single board computer remains to be seen — Upton suggests this is as low as things can go for the foreseeable future at least. And there’s no doubt $5 is an incredible price for a fully fledged computer which will run applications like Minecraft Pi and the Scratch visual programming language. So what does a $5 Pi get you, hardware wise? A 1Ghz core chip — in fact the same chip that was used in the original Raspberry Pi but upclocked to run a bit faster — and 512MB of RAM, plus on the ports front: a micro-SD card slot, a mini-HDMI and two micro-USB ports. The full specs run-down is as follows"
 },
@@ -57,14 +57,10 @@
     "http://i.kinja-img.com/gawker-media/image/upload/s--0edtChr4--/c_scale,fl_progressive,q_80,w_800/1480139126326310466.jpg"
   ],
   "sources": [
-    { "title": "Engadget", "image": "https://fews.io/static/img/websites/engadget.png"},
-    { "title": "Gizmodo", "image": "https://fews.io/static/img/websites/gizmodo.png" },
-    { "title": "TechCrunch", "image": "https://fews.io/static/img/websites/techcrunch.png"},
-    { "title": "Mashable", "image": "https://fews.io/static/img/websites/mashable.png" },
-    { "title": "Forbes", "image": "https://fews.io/static/img/websites/forbestech.png" },
-    { "title": "TechCrunch", "image": "https://fews.io/static/img/websites/techcrunch.png"},
-    { "title": "Mashable", "image": "https://fews.io/static/img/websites/mashable.png" },
-    { "title": "Forbes", "image": "https://fews.io/static/img/websites/forbestech.png" }
+    { "title": "Engadget", "image": "https://fews.io/static/img/websites/engadget.jpg"},
+    { "title": "Gizmodo", "image": "https://fews.io/static/img/websites/gizmodo.jpg" },
+    { "title": "TechCrunch", "image": "https://fews.io/static/img/websites/techcrunch.jpg"},
+    { "title": "Mashable", "image": "https://fews.io/static/img/websites/mashable.jpg" }
   ],
  "text": "The Raspberry Pi Foundation has upped the ante when it comes to low cost single board computers, announcing a new addition to its family of microprocessors today, called Pi Zero. And it costs…  just $5. (£4 in the U.K.) Or it should cost $5, albeit you may have to shop around the various Pi resellers to get it for that baseline price. And international buyers in certain regions may find they’re still paying a premium. But the Foundation’s intention is for the Pi Zero to retail for just five bucks. “We really hope this is going to get those last few people in the door and involved in computer programming,” says Pi co-founder Eben Upton in a video (embedded below) announcing the Pi Zero. So who is the Pi Zero for? Makers building connected devices and robotics projects are likely to be first in line in the queue here. Albeit, at $5 it’s pretty much an impulse purchase… (Indeed, the Pi Zero is being given away free on the cover of the Foundation’s MagPi magazine.) Pi Zero “We believe it will be particularly useful for people looking to do robotics or IoT projects — very small and low power, but able to drive a display and keyboard when you want to do debug,” Upton tells TechCrunch. The next cheapest Pi in the family is the Model A+ which costs $20. While this fall a Raspberry Pi rival/clone, called Orange Pi, also popped up, retailing for $15 so there’s no doubt that low cost computers are getting increasingly affordable. Whether $5 is the floor for a single board computer remains to be seen — Upton suggests this is as low as things can go for the foreseeable future at least. And there’s no doubt $5 is an incredible price for a fully fledged computer which will run applications like Minecraft Pi and the Scratch visual programming language. So what does a $5 Pi get you, hardware wise? A 1Ghz core chip — in fact the same chip that was used in the original Raspberry Pi but upclocked to run a bit faster — and 512MB of RAM, plus on the ports front: a micro-SD card slot, a mini-HDMI and two micro-USB ports. The full specs run-down is as follows"
 
@@ -93,14 +89,11 @@
     "http://cdn.slashgear.com/wp-content/uploads/2015/11/Apple-Watch-799x420.jpg"
   ],
   "sources": [
-    { "title": "Mashable", "image": "https://fews.io/static/img/websites/mashable.png" },
-    { "title": "Slashgear", "image": "https://fews.io/static/img/websites/slashgear.png"},
-    { "title": "TechCrunch", "image": "https://fews.io/static/img/websites/techcrunch.png"},
-    { "title": "Mashable", "image": "https://fews.io/static/img/websites/mashable.png" },
-    { "title": "Forbes", "image": "https://fews.io/static/img/websites/forbestech.png" },
-    { "title": "TechCrunch", "image": "https://fews.io/static/img/websites/techcrunch.png"},
-    { "title": "Mashable", "image": "https://fews.io/static/img/websites/mashable.png" },
-    { "title": "Forbes", "image": "https://fews.io/static/img/websites/forbestech.png" }
+    { "title": "Mashable", "image": "https://fews.io/static/img/websites/mashable.jpg" },
+    { "title": "Slashgear", "image": "https://fews.io/static/img/websites/slashgear.jpg"},
+    { "title": "TechCrunch", "image": "https://fews.io/static/img/websites/techcrunch.jpg"},
+    { "title": "Mashable", "image": "https://fews.io/static/img/websites/mashable.jpg" },
+    { "title": "Forbes", "image": "https://fews.io/static/img/websites/forbes.jpg" }
   ],
  "text": "The Raspberry Pi Foundation has upped the ante when it comes to low cost single board computers, announcing a new addition to its family of microprocessors today, called Pi Zero. And it costs…  just $5. (£4 in the U.K.) Or it should cost $5, albeit you may have to shop around the various Pi resellers to get it for that baseline price. And international buyers in certain regions may find they’re still paying a premium. But the Foundation’s intention is for the Pi Zero to retail for just five bucks. “We really hope this is going to get those last few people in the door and involved in computer programming,” says Pi co-founder Eben Upton in a video (embedded below) announcing the Pi Zero. So who is the Pi Zero for? Makers building connected devices and robotics projects are likely to be first in line in the queue here. Albeit, at $5 it’s pretty much an impulse purchase… (Indeed, the Pi Zero is being given away free on the cover of the Foundation’s MagPi magazine.) Pi Zero “We believe it will be particularly useful for people looking to do robotics or IoT projects — very small and low power, but able to drive a display and keyboard when you want to do debug,” Upton tells TechCrunch. The next cheapest Pi in the family is the Model A+ which costs $20. While this fall a Raspberry Pi rival/clone, called Orange Pi, also popped up, retailing for $15 so there’s no doubt that low cost computers are getting increasingly affordable. Whether $5 is the floor for a single board computer remains to be seen — Upton suggests this is as low as things can go for the foreseeable future at least. And there’s no doubt $5 is an incredible price for a fully fledged computer which will run applications like Minecraft Pi and the Scratch visual programming language. So what does a $5 Pi get you, hardware wise? A 1Ghz core chip — in fact the same chip that was used in the original Raspberry Pi but upclocked to run a bit faster — and 512MB of RAM, plus on the ports front: a micro-SD card slot, a mini-HDMI and two micro-USB ports. The full specs run-down is as follows"
 
@@ -129,8 +122,8 @@
     "http://i0.wp.com/venturebeat.com/wp-content/uploads/2015/05/JetBlue.jpg?zoom=2&fit=930%2C9999"
   ],
   "sources": [
-    { "title": "Slashgear", "image": "https://fews.io/static/img/websites/slashgear.png"},
-    { "title": "VentureBeat", "image": "https://fews.io/static/img/websites/venturebeat.png" }
+    { "title": "Slashgear", "image": "https://fews.io/static/img/websites/slashgear.jpg"},
+    { "title": "VentureBeat", "image": "https://fews.io/static/img/websites/venturebeat.jpg" }
   ],
  "text": "The Raspberry Pi Foundation has upped the ante when it comes to low cost single board computers, announcing a new addition to its family of microprocessors today, called Pi Zero. And it costs…  just $5. (£4 in the U.K.) Or it should cost $5, albeit you may have to shop around the various Pi resellers to get it for that baseline price. And international buyers in certain regions may find they’re still paying a premium. But the Foundation’s intention is for the Pi Zero to retail for just five bucks. “We really hope this is going to get those last few people in the door and involved in computer programming,” says Pi co-founder Eben Upton in a video (embedded below) announcing the Pi Zero. So who is the Pi Zero for? Makers building connected devices and robotics projects are likely to be first in line in the queue here. Albeit, at $5 it’s pretty much an impulse purchase… (Indeed, the Pi Zero is being given away free on the cover of the Foundation’s MagPi magazine.) Pi Zero “We believe it will be particularly useful for people looking to do robotics or IoT projects — very small and low power, but able to drive a display and keyboard when you want to do debug,” Upton tells TechCrunch. The next cheapest Pi in the family is the Model A+ which costs $20. While this fall a Raspberry Pi rival/clone, called Orange Pi, also popped up, retailing for $15 so there’s no doubt that low cost computers are getting increasingly affordable. Whether $5 is the floor for a single board computer remains to be seen — Upton suggests this is as low as things can go for the foreseeable future at least. And there’s no doubt $5 is an incredible price for a fully fledged computer which will run applications like Minecraft Pi and the Scratch visual programming language. So what does a $5 Pi get you, hardware wise? A 1Ghz core chip — in fact the same chip that was used in the original Raspberry Pi but upclocked to run a bit faster — and 512MB of RAM, plus on the ports front: a micro-SD card slot, a mini-HDMI and two micro-USB ports. The full specs run-down is as follows"
 

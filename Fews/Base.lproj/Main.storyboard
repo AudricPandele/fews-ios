@@ -17,7 +17,24 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SJO-Go-G9X">
+                                <rect key="frame" x="246" y="290" width="115" height="22"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Chargement..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dI-g8-5hq">
+                                        <rect key="frame" x="0.0" y="0.0" width="115" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SJO-Go-G9X" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QxJ-1b-yW2"/>
+                            <constraint firstItem="SJO-Go-G9X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yfh-ua-l2k"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5So-zK-gIo">
                         <barButtonItem key="rightBarButtonItem" title="Skip" id="qUK-8H-SyQ">
@@ -26,6 +43,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="loading" destination="8dI-g8-5hq" id="MrN-sl-TQQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -164,7 +184,7 @@
             </objects>
             <point key="canvasLocation" x="1948" y="307"/>
         </scene>
-        <!--Article View Controller-->
+        <!--Title-->
         <scene sceneID="FPs-tv-de6">
             <objects>
                 <viewController storyboardIdentifier="ArticleViewController" automaticallyAdjustsScrollViewInsets="NO" id="Tv0-wI-AlP" customClass="ArticleViewController" customModule="Fews" customModuleProvider="target" sceneMemberID="viewController">
@@ -219,6 +239,7 @@
                             <constraint firstAttribute="trailing" secondItem="Oud-rl-zLM" secondAttribute="trailing" id="wgz-cT-qsC"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="EYk-fo-VKM"/>
                     <connections>
                         <outlet property="articleTextLabel" destination="7wF-yi-ZCe" id="aaM-0G-Dew"/>
                         <outlet property="imageView" destination="Oud-rl-zLM" id="gpt-4f-OJk"/>

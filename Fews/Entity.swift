@@ -25,4 +25,8 @@ class Entity: NSObject {
     func countImagesSources(index: Int) -> Int{
         return self.readableJSON[index]["sources"].count
     }
+    
+    func addToJson(data: NSData){
+        self.readableJSON = JSON(self.readableJSON.arrayObject! + JSON(data: data).arrayObject!)
+    }
 }

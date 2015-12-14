@@ -24,58 +24,54 @@ class PageContentHolderViewController: UIViewController {
     var textArticle: String!
     
     override func viewDidLoad() {
-        super.viewDidLoad()        
+        super.viewDidLoad()
         
         self.imageView.image = self.imageFileName
-        self.titleLabel.alpha = 0.1
+        self.titleLabel.alpha = 0.0
         self.titleLabel.text = self.titleText
-        
         let nbOfSources = self.sourceImageName.count
         let nbOfSourcesLeft = nbOfSources - 3
 
-        UI.animateWithDuration(1.0, animations: { () -> Void in
+        UIView.animateWithDuration(1.0, animations: {
             self.titleLabel.alpha = 1.0
         })
-        
-        
-//        if (nbOfSources >= 1){
-//            NSOperationQueue().addOperationWithBlock {
-//            if let url  = NSURL(string: self.sourceImageName[0] as! String),
-//                data = NSData(contentsOfURL: url)
-//            {
-//                NSOperationQueue.mainQueue().addOperationWithBlock {
-//                self.imageSource.image = UIImage(data: data)
-//                }
-//            }
-//            }
-//        }
-//        
-//        if (nbOfSources >= 2){
-//            NSOperationQueue().addOperationWithBlock {
-//            if let url  = NSURL(string: self.sourceImageName[1] as! String),
-//                data = NSData(contentsOfURL: url)
-//            {
-//                NSOperationQueue.mainQueue().addOperationWithBlock {
-//                    self.imageSource2.image = UIImage(data: data)
-//                }
-//            }
-//            }
-//        }
-//        
-//        if (nbOfSources >= 3){
-//            NSOperationQueue().addOperationWithBlock {
-//            if let url  = NSURL(string: self.sourceImageName[2] as! String),
-//                data = NSData(contentsOfURL: url)
-//            {
-//                NSOperationQueue.mainQueue().addOperationWithBlock {
-//                    self.imageSource3.image = UIImage(data: data)
-//                }
-//            }
-//        }
 
-//}
+        if (nbOfSources >= 1){
+            NSOperationQueue().addOperationWithBlock {
+            if let url  = NSURL(string: self.sourceImageName[0] as! String),
+                data = NSData(contentsOfURL: url)
+            {
+                NSOperationQueue.mainQueue().addOperationWithBlock {
+                self.imageSource.image = UIImage(data: data)
+                }
+            }
+            }
+        }
         
-        self.titleLabel.text = self.titleText
+        if (nbOfSources >= 2){
+            NSOperationQueue().addOperationWithBlock {
+            if let url  = NSURL(string: self.sourceImageName[1] as! String),
+                data = NSData(contentsOfURL: url)
+            {
+                NSOperationQueue.mainQueue().addOperationWithBlock {
+                    self.imageSource2.image = UIImage(data: data)
+                }
+            }
+            }
+        }
+        
+        if (nbOfSources >= 3){
+            NSOperationQueue().addOperationWithBlock {
+            if let url  = NSURL(string: self.sourceImageName[2] as! String),
+                data = NSData(contentsOfURL: url)
+            {
+                NSOperationQueue.mainQueue().addOperationWithBlock {
+                    self.imageSource3.image = UIImage(data: data)
+                }
+            }
+        }
+
+}
         
         if (nbOfSourcesLeft > 0){
             self.nbOfSourceLeftLabel.text = "+ \(nbOfSourcesLeft)"
@@ -110,10 +106,6 @@ class PageContentHolderViewController: UIViewController {
 //        let appdelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 //        
 //        appdelegate.window?.rootViewController = nextView
-    }
-    
-    @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
-        NSLog("ok")
     }
 
 }
