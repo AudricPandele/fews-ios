@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8224ADB21C1F10D100FC4FC8 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8224ADB11C1F10D100FC4FC8 /* NavigationBar.swift */; };
 		82A8DA4D1C18247B00799225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8DA4C1C18247B00799225 /* AppDelegate.swift */; };
 		82A8DA4F1C18247B00799225 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8DA4E1C18247B00799225 /* ViewController.swift */; };
 		82A8DA521C18247B00799225 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82A8DA501C18247B00799225 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		0DE6EA55EB562B8ABD249310 /* Pods-Fews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fews/Pods-Fews.debug.xcconfig"; sourceTree = "<group>"; };
 		6B439C6B6936200BF5DC0F75 /* Pods-Fews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fews.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fews/Pods-Fews.release.xcconfig"; sourceTree = "<group>"; };
+		8224ADB11C1F10D100FC4FC8 /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		82A8DA491C18247B00799225 /* Fews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82A8DA4C1C18247B00799225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82A8DA4E1C18247B00799225 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				82A8DA4E1C18247B00799225 /* ViewController.swift */,
 				82A8DA501C18247B00799225 /* Main.storyboard */,
 				82BFFADC1C18843500999325 /* ScrollViewController.swift */,
+				8224ADB11C1F10D100FC4FC8 /* NavigationBar.swift */,
 				82A8DA6A1C18447F00799225 /* ArticleViewController.swift */,
 				82A8DA601C1828AA00799225 /* PageContentHolderViewController.swift */,
 				82A8DA531C18247B00799225 /* Assets.xcassets */,
@@ -153,7 +156,7 @@
 				TargetAttributes = {
 					82A8DA481C18247B00799225 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = T6RB53DB8F;
+						DevelopmentTeam = SF6BSG34CG;
 					};
 				};
 			};
@@ -247,6 +250,7 @@
 				82A8DA611C1828AA00799225 /* PageContentHolderViewController.swift in Sources */,
 				EB3C5F491C1C782C004C7C13 /* Entity.swift in Sources */,
 				82BFFADD1C18843500999325 /* ScrollViewController.swift in Sources */,
+				8224ADB21C1F10D100FC4FC8 /* NavigationBar.swift in Sources */,
 				82A8DA6B1C18447F00799225 /* ArticleViewController.swift in Sources */,
 				82A8DA4D1C18247B00799225 /* AppDelegate.swift in Sources */,
 			);
@@ -370,7 +374,7 @@
 				);
 				INFOPLIST_FILE = Fews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = clement.Fews;
+				PRODUCT_BUNDLE_IDENTIFIER = audric.Fews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -389,7 +393,7 @@
 				);
 				INFOPLIST_FILE = Fews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = clement.Fews;
+				PRODUCT_BUNDLE_IDENTIFIER = audric.Fews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

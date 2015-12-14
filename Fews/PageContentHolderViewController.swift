@@ -90,7 +90,7 @@ class PageContentHolderViewController: UIViewController {
         if let destinationVC = segue.destinationViewController as? ArticleViewController{
             
             destinationVC.titleArticle = self.titleText
-            //destinationVC.imageArticle = self.imageFileName
+            destinationVC.imageArticle = self.imageFileName
             destinationVC.textArticle = self.textArticle
         }
         
