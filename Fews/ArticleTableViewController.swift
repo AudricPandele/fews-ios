@@ -13,8 +13,13 @@ class ArticleTableViewController: UITableViewController {
     var imageArticle: UIImage!
     var titleArticle: String!
     var textArticle: String!
-    var textRowHeight: CGFloat!
+    var textRowHeight: CGFloat! = 10
 
+    override func viewWillAppear(animated: Bool) {
+        
+        tableView.contentOffset.y = 0.0
+    }
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
     }
@@ -50,31 +55,30 @@ class ArticleTableViewController: UITableViewController {
             textRowHeight = (cell as! TextCell).articleLabel.frame.height
         }
         
+        NSLog("\(textRowHeight)")
+        
         return cell
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return UITableViewAutomaticDimension
-        default: ()
-        
-        if (textRowHeight > 0.0){
-            return textRowHeight + 20
-        }else{
+            return 300
+        case 1:
             return 200
-            }
+        default: ()
+        return 200
         }
     }
     
-    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        switch indexPath.section {
-        case 0:
-            return 200
-        default: ()
-        return 50
-        }
-    }
+//    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+//        switch indexPath.section {
+//        case 0:
+//            return 200
+//        default: ()
+//        return 150
+//        }
+//    }
     
     @IBAction func close(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: {});

@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SJO-Go-G9X">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SJO-Go-G9X">
                                 <rect key="frame" x="246" y="290" width="115" height="22"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chargement..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dI-g8-5hq">
@@ -33,8 +33,9 @@
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SJO-Go-G9X" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QxJ-1b-yW2"/>
-                            <constraint firstItem="SJO-Go-G9X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yfh-ua-l2k"/>
+                            <constraint firstItem="SJO-Go-G9X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="246" id="UyB-ay-Hg2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SJO-Go-G9X" secondAttribute="bottom" constant="288" id="jb6-eq-aFZ"/>
+                            <constraint firstItem="SJO-Go-G9X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="270" id="mY6-k7-tpB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5So-zK-gIo">
@@ -265,25 +266,25 @@
                                     <outlet property="topSpaceConstraint" destination="Qpt-Ee-jTd" id="Z8I-QH-abS"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TextCell" rowHeight="124" id="uAv-q5-Nzl" customClass="TextCell" customModule="Fews" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="386" width="600" height="124"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TextCell" rowHeight="188" id="uAv-q5-Nzl" customClass="TextCell" customModule="Fews" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="386" width="600" height="188"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uAv-q5-Nzl" id="DUT-Qf-zgo">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="123.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="188"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ava-K1-6ce">
-                                            <rect key="frame" x="20" y="31" width="560" height="62"/>
+                                            <rect key="frame" x="20" y="31" width="560" height="127"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="ava-K1-6ce" firstAttribute="top" secondItem="DUT-Qf-zgo" secondAttribute="topMargin" constant="23" id="9Ni-7Y-ZDu"/>
-                                        <constraint firstItem="ava-K1-6ce" firstAttribute="centerY" secondItem="DUT-Qf-zgo" secondAttribute="centerY" id="QiB-m7-On3"/>
-                                        <constraint firstItem="ava-K1-6ce" firstAttribute="leading" secondItem="DUT-Qf-zgo" secondAttribute="leadingMargin" constant="12" id="b1J-nh-oE6"/>
-                                        <constraint firstItem="ava-K1-6ce" firstAttribute="centerX" secondItem="DUT-Qf-zgo" secondAttribute="centerX" id="eB5-ZE-gfj"/>
+                                        <constraint firstItem="ava-K1-6ce" firstAttribute="centerY" secondItem="DUT-Qf-zgo" secondAttribute="centerY" id="9Vv-Q2-qkb"/>
+                                        <constraint firstItem="ava-K1-6ce" firstAttribute="top" secondItem="DUT-Qf-zgo" secondAttribute="topMargin" constant="23" id="PfC-gm-Ndt"/>
+                                        <constraint firstItem="ava-K1-6ce" firstAttribute="leading" secondItem="DUT-Qf-zgo" secondAttribute="leadingMargin" constant="12" id="bc3-0X-nPM"/>
+                                        <constraint firstItem="ava-K1-6ce" firstAttribute="centerX" secondItem="DUT-Qf-zgo" secondAttribute="centerX" id="v7e-iB-zwu"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

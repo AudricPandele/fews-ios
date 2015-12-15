@@ -102,14 +102,7 @@ class PageContentHolderViewController: UIViewController {
     
     
     @IBAction func goToArticle(sender: AnyObject) {
-        
         performSegueWithIdentifier("ArticleViewController", sender: self)
-        
-//        let nextView: ArticleViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ArticleViewController") as! ArticleViewController
-//        
-//        let appdelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-//        
-//        appdelegate.window?.rootViewController = nextView
     }
 
 }
