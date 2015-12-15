@@ -103,6 +103,10 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
 
         index++
         NSLog("page index after: \(index)")
+        
+        if (index == 0){
+            print("Helllooooo")
+        }
 
         if(index == pageImages!.count)
         {

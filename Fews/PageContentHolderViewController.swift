@@ -70,8 +70,7 @@ class PageContentHolderViewController: UIViewController {
                 }
             }
         }
-
-}
+    }  
         
         if (nbOfSourcesLeft > 0){
             self.nbOfSourceLeftLabel.text = "+ \(nbOfSourcesLeft)"
@@ -87,7 +86,12 @@ class PageContentHolderViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         
-        if let destinationVC = segue.destinationViewController as? ArticleViewController{
+        if let navVC = segue.destinationViewController as? UINavigationController,
+        let destinationVC = navVC.topViewController as? ArticleTableViewController {
+            
+            navVC.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+            navVC.navigationBar.shadowImage = UIImage()
+            navVC.navigationBar.translucent = true
             
             destinationVC.titleArticle = self.titleText
             destinationVC.imageArticle = self.imageFileName
