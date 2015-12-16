@@ -20,7 +20,10 @@
     "http://www.forbes.com/sites/theopriestley/2015/11/26/raspberry-pi-unveils-new-5-computer-raspberry-pi-zero/"
   ],
  "summary": "",
- "top_image":"http://i68.servimg.com/u/f68/13/85/87/18/rsz_im10.jpg",
+ "top_images":[
+               { "low": "http://i68.servimg.com/u/f68/13/85/87/18/rsz_im10.jpg" },
+               { "original": "http://blogs-images.forbes.com/theopriestley/files/2015/11/rsz_img_4054-1200x837.jpg" }
+  ],
   "images": [
     "http://blogs-images.forbes.com/theopriestley/files/2015/11/rsz_img_4054-1200x837.jpg"
   ],
@@ -53,7 +56,10 @@
     "http://feeds.gawker.com/~r/gizmodo/full/~3/tTG0aRSi4Mg/this-globe-within-a-globe-is-essential-to-navigating-in-1737135960"
   ],
   "summary": "",
- "top_image": "http://i68.servimg.com/u/f68/13/85/87/18/osiris10.jpg",
+ "top_images":[
+               { "low": "http://i68.servimg.com/u/f68/13/85/87/18/osiris10.jpg" },
+               { "original": "http://o.aolcdn.com/hss/storage/midas/fa14390c7284a2950954343089a3de1c/202856994/osiris-rex01.jpg" }
+               ],
   "images": [
     "http://o.aolcdn.com/hss/storage/midas/fa14390c7284a2950954343089a3de1c/202856994/osiris-rex01.jpg",
     "http://i.kinja-img.com/gawker-media/image/upload/s--0edtChr4--/c_scale,fl_progressive,q_80,w_800/1480139126326310466.jpg"
@@ -86,7 +92,10 @@
     "http://www.slashgear.com/vine-arrives-on-apple-watch-adds-new-discovery-tool-for-iphone-24415886/"
   ],
   "summary": "",
-  "top_image": "http://i68.servimg.com/u/f68/13/85/87/18/vinelo10.jpg",
+ "top_images":[
+               { "low": "http://i68.servimg.com/u/f68/13/85/87/18/vinelo10.jpg" },
+               { "original": "http://rack.2.mshcdn.com/media/ZgkyMDE1LzExLzI0LzE4L3ZpbmVsb2cwOTg3LjBmYjEyLmpwZwpwCXRodW1iCTk1MHg1MzQjCmUJanBn/847e3d2f/ef4/vinelog0987.jpg" }
+               ],
   "images": [
     "http://rack.2.mshcdn.com/media/ZgkyMDE1LzExLzI0LzE4L3ZpbmVsb2cwOTg3LjBmYjEyLmpwZwpwCXRodW1iCTk1MHg1MzQjCmUJanBn/847e3d2f/ef4/vinelog0987.jpg",
     "http://cdn.slashgear.com/wp-content/uploads/2015/11/Apple-Watch-799x420.jpg"
@@ -120,7 +129,10 @@
     "http://venturebeat.com/2015/11/24/you-can-now-stream-amazon-video-on-jetblue-flights-without-paying-for-wi-fi/"
   ],
   "summary": "",
-  "top_image": "http://i68.servimg.com/u/f68/13/85/87/18/14111910.jpg",
+ "top_images":[
+               { "low": "http://i68.servimg.com/u/f68/13/85/87/18/14111910.jpg" },
+               { "original": "http://cdn.slashgear.com/wp-content/uploads/2015/11/141119-jet-blue-luggage-arp-1050a_c06fd39cc108a40f2df31d09142e3bcd-980x420.jpg" }
+               ],
   "images": [
     "http://cdn.slashgear.com/wp-content/uploads/2015/11/141119-jet-blue-luggage-arp-1050a_c06fd39cc108a40f2df31d09142e3bcd-980x420.jpg",
     "http://i0.wp.com/venturebeat.com/wp-content/uploads/2015/05/JetBlue.jpg?zoom=2&fit=930%2C9999"

@@ -7,15 +7,18 @@
 //
 
 import UIKit
+import SwiftyJSON
+import SwiftDate
 
 class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
-    var pageImages: NSArray! = []
-    var pageTitles: NSArray! = []
+//    var pageTopImages: NSArray! = []
+//    var pageTitles: NSArray! = []
+//    let imagesArray: NSMutableArray! = []
+
     var pageViewController: UIPageViewController!
-    var count = 0
-    var JsonEntity: Entity = Entity(path: NSBundle.mainBundle().pathForResource("jsonFile", ofType: "json") as String!)
-    let imagesArray: NSMutableArray! = []
+    var JsonEntity: Entity = Entity(path: NSBundle.mainBundle().pathForResource("events", ofType: "json") as String!)
+    var eventsList: EventsList = EventsList()
     
     @IBOutlet weak var loading: UILabel!
     var overlay : UIView?
@@ -23,17 +26,8 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.pageTitles = parseJSONTitles()
-        self.pageImages = parseJSONImages()
-        
-        for i in 0...self.JsonEntity.readableJSON.count-1 {
-            if let url = NSURL(string: self.JsonEntity.readableJSON[i]["images"][0].string as String!),
-                data = NSData(contentsOfURL: url){
-                    imagesArray.addObject(UIImage(data: data)!)
-                    NSLog("image loaded")
-            }
-        }
-        
+        eventsList = self.JsonEntity.JsonToEventsList(eventsList)
+
         self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController
         self.pageViewController.dataSource = self
         
@@ -50,24 +44,18 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
         self.pageViewController.didMoveToParentViewController(self)
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    
     func pageTutorialAtIndex(index: Int) -> PageContentHolderViewController
     {
-        let titles = NSMutableArray()
-        for j in 0...self.JsonEntity.countImagesSources(index)-1{
-            titles.addObject(self.JsonEntity.readableJSON[index]["sources"][j]["image"].string as String!)
-        }
-
         let pageContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageContentHolderViewController") as! PageContentHolderViewController
-        
-        pageContentViewController.textArticle = self.JsonEntity.readableJSON[index]["text"].string! as String
-        pageContentViewController.imageFileName = self.imagesArray[index] as! UIImage
-        pageContentViewController.titleText = pageTitles![index] as! String
-        pageContentViewController.sourceImageName = titles as NSArray
+
+        pageContentViewController.event = eventsList.find(index) as! Event
         pageContentViewController.pageIndex = index
         
         return pageContentViewController
@@ -79,13 +67,10 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
         let viewController = viewController as! PageContentHolderViewController
         var index = viewController.pageIndex as Int
         
-        if(index == 0 || index == NSNotFound)
-        {
+        if(index == 0 || index == NSNotFound){
             return nil
         }
-        
         index--
-        
         return self.pageTutorialAtIndex(index)
     }
     
@@ -99,72 +84,48 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
             NSLog("not found")
             return nil
         }
-        NSLog("page index before: \(index)")
-
         index++
-        NSLog("page index after: \(index)")
         
         if (index == 0){
             print("Helllooooo")
         }
-
-        if(index == pageImages!.count)
+        
+        if(index == self.eventsList.lenght())
         {
-            NSLog("Index: \(index). Images count: \(pageImages!.count)")
-            NSLog("end")
-            let old: Int = pageImages!.count
-            NSLog("old: \(old)")
-            NSLog("=== Before: \(JsonEntity.readableJSON.count). Count: \(pageImages!.count)")
-            JsonEntity.addToJson(JsonEntity.jsonData)
-            self.pageTitles = parseJSONTitles()
-            self.pageImages = parseJSONImages()
-            NSLog("=== After: \(JsonEntity.readableJSON.count). Count: \(pageImages!.count)")
-            self.reload(old)
-            return self.pageTutorialAtIndex(old)
+//            NSLog("Index: \(index). Images count: \(pageImages!.count)")
+//            NSLog("end")
+//            let old: Int = pageImages!.count
+//            NSLog("old: \(old)")
+//            NSLog("=== Before: \(JsonEntity.readableJSON.count). Count: \(pageImages!.count)")
+//            JsonEntity.addToJson(JsonEntity.jsonData)
+//            self.pageTitles = parseJSONTitles()
+//            self.pageImages = parseJSONImages()
+//            NSLog("=== After: \(JsonEntity.readableJSON.count). Count: \(pageImages!.count)")
+//            self.reload(old)
+//            return self.pageTutorialAtIndex(old)
+            return nil
         }
         return self.pageTutorialAtIndex(index)
     }
 
     
-    func reload(start: Int = 0){
-        for i in start...self.JsonEntity.readableJSON.count-1 {
-            if let url = NSURL(string: self.JsonEntity.readableJSON[i]["images"][0].string as String!),
-                data = NSData(contentsOfURL: url){
-                self.imagesArray.addObject(UIImage(data: data)!)
-                NSLog("image loaded")
-            }
-        }
-    }
+//    func reload(start: Int = 0){
+//        for i in start...self.JsonEntity.readableJSON.count-1 {
+//            if let url = NSURL(string: self.JsonEntity.readableJSON[i]["images"][0].string as String!),
+//                data = NSData(contentsOfURL: url){
+//                self.imagesArray.addObject(UIImage(data: data)!)
+//                NSLog("image loaded")
+//            }
+//        }
+//    }
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return pageImages!.count
+//        return pageImages!.count
+        return 3
     }
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
         return 0
-    }
-    
-    
-    func parseJSONTitles() -> NSMutableArray{
-        let nb = self.JsonEntity.readableJSON.count
-        let titles = NSMutableArray()
-        
-        for i in 0...nb-1 {
-            titles.addObject(self.JsonEntity.readableJSON[i]["articles"][0].string as String!)
-        }
-        
-        return titles
-    }
-    
-    func parseJSONImages() -> NSMutableArray{
-        let nb = self.JsonEntity.readableJSON.count
-        let titles = NSMutableArray()
-        
-        for i in 0...nb-1 {
-            titles.addObject(self.JsonEntity.readableJSON[i]["images"][0].string as String!)
-        }
-        
-        return titles
     }
 
 }

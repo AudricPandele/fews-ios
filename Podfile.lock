@@ -1,7 +1,11 @@
 PODS:
+  - Haneke (1.0.1)
+  - SwiftDate (2.0.2)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
+  - Haneke
+  - SwiftDate (~> 2.0)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
 EXTERNAL SOURCES:
@@ -14,6 +18,8 @@ CHECKOUT OPTIONS:
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
+  Haneke: d60be8b96b228633b24708dd153169d6849d6f78
+  SwiftDate: b4f4d0962afe48365ad2800c9850a6626deb9359
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

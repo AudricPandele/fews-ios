@@ -7,16 +7,17 @@
 //
 
 import UIKit
+import Haneke
 
 class ArticleTableViewController: UITableViewController {
 
     var imageArticle: UIImage!
     var titleArticle: String!
     var textArticle: String!
+    var event: Event!
     var textRowHeight: CGFloat! = 10
 
     override func viewWillAppear(animated: Bool) {
-        
         tableView.contentOffset.y = 0.0
     }
     
@@ -43,19 +44,19 @@ class ArticleTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
         
-        
-        if cellIdentifier == "ImageCell" {
-            (cell as! ImageCell).imageViewArticle.image = imageArticle
-            (cell as! ImageCell).titleLabel.text = titleArticle
+        switch cellIdentifier {
+        case "ImageCell":
+                if let url = NSURL(string: self.event.top_image.original) {
+                    (cell as! ImageCell).imageViewArticle.hnk_setImageFromURL(url)
+                }
+                (cell as! ImageCell).titleLabel.text = self.event.prepareArticleShortenTitle()
+            
+        case "TextCell":
+                (cell as! TextCell).articleLabel.text = textArticle
+                textRowHeight = (cell as! TextCell).articleLabel.frame.height
+            
+        default: ()
         }
-
-
-        if cellIdentifier == "TextCell" {
-            (cell as! TextCell).articleLabel.text = textArticle
-            textRowHeight = (cell as! TextCell).articleLabel.frame.height
-        }
-        
-        NSLog("\(textRowHeight)")
         
         return cell
     }
@@ -85,11 +86,9 @@ class ArticleTableViewController: UITableViewController {
     }
     
     @IBAction func share(sender: AnyObject) {
-        let textToShare = "I found that on Fews"
-        
         if let myWebsite = NSURL(string: "url_of_event")
         {
-            let objectsToShare = [textToShare, myWebsite]
+            let objectsToShare = [event.shareEvent(), myWebsite]
             let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
             
             //New Excluded Activities Code

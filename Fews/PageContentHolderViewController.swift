@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Haneke
+import SwiftDate
 
 class PageContentHolderViewController: UIViewController {
 
@@ -16,67 +18,42 @@ class PageContentHolderViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var nbOfSourceLeftLabel: UILabel!
+    @IBOutlet weak var eventDate: UILabel!
     
-    var imageFileName: UIImage!
-    var sourceImageName: NSArray!
-    var titleText: String!
     var pageIndex: Int!
-    var textArticle: String!
+    var event: Event!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.imageView.image = self.imageFileName
         self.titleLabel.alpha = 0.0
-        self.titleLabel.text = self.titleText
-        let nbOfSources = self.sourceImageName.count
-        let nbOfSourcesLeft = nbOfSources - 3
-
+        self.titleLabel.text = self.event.prepareArticleShortenTitle()
+        
+        let date = self.event.id.toDate(DateFormat.Custom("yyyyMMddHHmmss"))
+        self.eventDate.text = "\(date!.toRelativeString()) ago"
+        
         UIView.animateWithDuration(1.0, animations: {
             self.titleLabel.alpha = 1.0
         })
-
-        if (nbOfSources >= 1){
-            NSOperationQueue().addOperationWithBlock {
-            if let url  = NSURL(string: self.sourceImageName[0] as! String),
-                data = NSData(contentsOfURL: url)
-            {
-                NSOperationQueue.mainQueue().addOperationWithBlock {
-                self.imageSource.image = UIImage(data: data)
-                }
-            }
+        
+        if let url = NSURL(string: self.event.top_image.original) {
+            imageView.hnk_setImageFromURL(url)
+        }
+        
+        let sources: [UIImageView] = [self.imageSource, self.imageSource2, self.imageSource3]
+        print(zip(event.articles, sources))
+        for (article, source) in zip(event.articles, sources) {
+            if let url = NSURL(string: article.logo) {
+                source.hnk_setImageFromURL(url)
             }
         }
         
-        if (nbOfSources >= 2){
-            NSOperationQueue().addOperationWithBlock {
-            if let url  = NSURL(string: self.sourceImageName[1] as! String),
-                data = NSData(contentsOfURL: url)
-            {
-                NSOperationQueue.mainQueue().addOperationWithBlock {
-                    self.imageSource2.image = UIImage(data: data)
-                }
-            }
-            }
-        }
-        
-        if (nbOfSources >= 3){
-            NSOperationQueue().addOperationWithBlock {
-            if let url  = NSURL(string: self.sourceImageName[2] as! String),
-                data = NSData(contentsOfURL: url)
-            {
-                NSOperationQueue.mainQueue().addOperationWithBlock {
-                    self.imageSource3.image = UIImage(data: data)
-                }
-            }
-        }
-    }  
-        
+        let nbOfSourcesPerEvent = 3
+        let nbOfSources = self.event.NbArticles()
+        let nbOfSourcesLeft = nbOfSources - nbOfSourcesPerEvent
         if (nbOfSourcesLeft > 0){
-            self.nbOfSourceLeftLabel.text = "+ \(nbOfSourcesLeft)"
+            self.nbOfSourceLeftLabel.text = "+\(nbOfSourcesLeft)"
         }
-        
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -93,9 +70,7 @@ class PageContentHolderViewController: UIViewController {
             navVC.navigationBar.shadowImage = UIImage()
             navVC.navigationBar.translucent = true
             
-            destinationVC.titleArticle = self.titleText
-            destinationVC.imageArticle = self.imageFileName
-            destinationVC.textArticle = self.textArticle
+            destinationVC.event = self.event
         }
         
     }

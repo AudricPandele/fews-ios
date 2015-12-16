@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -143,6 +143,16 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zz7-c7-yNn">
+                                <rect key="frame" x="40" y="87" width="116" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="SQI-OP-n2z"/>
+                                    <constraint firstAttribute="height" constant="21" id="vWu-w6-aOd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -150,8 +160,11 @@
                             <constraint firstItem="uLT-C8-cyG" firstAttribute="top" secondItem="wTb-Lm-fIF" secondAttribute="top" id="39h-SO-GAG"/>
                             <constraint firstItem="CJL-da-XhS" firstAttribute="top" secondItem="Qa4-GU-M9o" secondAttribute="bottom" constant="17" id="4PX-76-e8x"/>
                             <constraint firstItem="91m-ck-iqG" firstAttribute="leading" secondItem="kxT-sO-FBn" secondAttribute="leading" id="804-A8-El2"/>
+                            <constraint firstItem="kxT-sO-FBn" firstAttribute="leading" secondItem="zz7-c7-yNn" secondAttribute="trailing" constant="344" id="8tT-Sb-WdF"/>
+                            <constraint firstItem="zz7-c7-yNn" firstAttribute="leading" secondItem="wTb-Lm-fIF" secondAttribute="leadingMargin" constant="20" id="FLN-21-QET"/>
                             <constraint firstItem="91m-ck-iqG" firstAttribute="leading" secondItem="Qa4-GU-M9o" secondAttribute="leading" id="G6H-Qe-IbN"/>
                             <constraint firstItem="SSL-Gc-Jh5" firstAttribute="top" secondItem="uLT-C8-cyG" secondAttribute="top" id="Gzp-Oj-aR1"/>
+                            <constraint firstItem="zz7-c7-yNn" firstAttribute="top" secondItem="YuJ-xe-i4p" secondAttribute="bottom" constant="9" id="IiG-h2-S2W"/>
                             <constraint firstItem="kxT-sO-FBn" firstAttribute="top" secondItem="YuJ-xe-i4p" secondAttribute="top" id="IuF-6G-EpQ"/>
                             <constraint firstItem="SSL-Gc-Jh5" firstAttribute="leading" secondItem="uLT-C8-cyG" secondAttribute="leading" id="KMk-YB-Iqu"/>
                             <constraint firstAttribute="trailing" secondItem="uLT-C8-cyG" secondAttribute="trailing" id="Rkf-Av-mfv"/>
@@ -174,6 +187,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="eventDate" destination="zz7-c7-yNn" id="umW-CU-6so"/>
                         <outlet property="imageSource" destination="kxT-sO-FBn" id="3mS-r8-46a"/>
                         <outlet property="imageSource2" destination="91m-ck-iqG" id="jOU-iC-Swk"/>
                         <outlet property="imageSource3" destination="Qa4-GU-M9o" id="xMF-UY-0fn"/>
@@ -270,7 +284,7 @@
                                 <rect key="frame" x="0.0" y="386" width="600" height="188"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uAv-q5-Nzl" id="DUT-Qf-zgo">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="188"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="187.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ava-K1-6ce">

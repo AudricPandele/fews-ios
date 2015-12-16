@@ -1,0 +1,70 @@
+[
+ {
+ "_id": "20151216120000",
+ "timestamp": "",
+ "articles": [
+              {
+              "name": "TechCrunch",
+              "origin": "http://feeds.feedburner.com/TechCrunch",
+              "title": "Holy Smoke! New Raspberry Pi Zero Costs Just $5…",
+              "link": "http://techcrunch.com/2015/11/26/raspberry-pi-zero/",
+              "logo": "https://fews.io/static/img/websites/usatoday.jpg"
+              },
+              {
+              "name": "Mashable",
+              "origin": "http://feeds.mashable.com/mashable/tech",
+              "title": "Raspberry Pi Zero is a tiny computer that costs only $5",
+              "link": "http://mashable.com/2015/11/26/raspberry-pi-zero/",
+              "logo": "https://fews.io/static/img/websites/mashable.jpg"
+              },
+              {
+              "name": "TechCrunch",
+              "origin": "http://feeds.feedburner.com/TechCrunch",
+              "title": "Holy Smoke! New Raspberry Pi Zero Costs Just $5…",
+              "link": "http://techcrunch.com/2015/11/26/raspberry-pi-zero/",
+              "logo": "https://fews.io/static/img/websites/usatoday.jpg"
+              },
+              {
+              "name": "Mashable",
+              "origin": "http://feeds.mashable.com/mashable/tech",
+              "title": "Raspberry Pi Zero is a tiny computer that costs only $5",
+              "link": "http://mashable.com/2015/11/26/raspberry-pi-zero/",
+              "logo": "https://fews.io/static/img/websites/mashable.jpg"
+              }
+              ],
+ 
+ "top_image": { "low": "http://i68.servimg.com/u/f68/13/85/87/18/rsz_im10.jpg",
+                "original": "http://blogs-images.forbes.com/theopriestley/files/2015/11/rsz_img_4054-1200x837.jpg"
+                },
+ "images": [
+            "http://blogs-images.forbes.com/theopriestley/files/2015/11/rsz_img_4054-1200x837.jpg"
+            ]
+ },
+ {
+ "_id": "20151215000000",
+ "timestamp": "",
+ "articles": [
+              {
+              "name": "TechCrunch",
+              "origin": "http://feeds.feedburner.com/TechCrunch",
+              "title": "Holy Smoke! New Raspberry Pi Zero Costs Just $5…",
+              "link": "http://techcrunch.com/2015/11/26/raspberry-pi-zero/",
+              "logo": "https://fews.io/static/img/websites/usatoday.jpg"
+              },
+              {
+              "name": "Mashable",
+              "origin": "http://feeds.mashable.com/mashable/tech",
+              "title": "Yo",
+              "link": "http://mashable.com/2015/11/26/raspberry-pi-zero/",
+              "logo": "https://fews.io/static/img/websites/mashable.jpg"
+              }
+              ],
+ 
+ "top_image": { "low": "http://i68.servimg.com/u/f68/13/85/87/18/rsz_im10.jpg",
+ "original": "http://blogs-images.forbes.com/theopriestley/files/2015/11/rsz_img_4054-1200x837.jpg"
+ },
+ "images": [
+            "http://blogs-images.forbes.com/theopriestley/files/2015/11/rsz_img_4054-1200x837.jpg"
+            ]
+ }
+]
