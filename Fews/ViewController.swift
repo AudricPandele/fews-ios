@@ -17,7 +17,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
 //    let imagesArray: NSMutableArray! = []
 
     var pageViewController: UIPageViewController!
-    var JsonEntity: Entity = Entity(path: NSBundle.mainBundle().pathForResource("events", ofType: "json") as String!)
+    var JsonEntity: JsonObject = JsonObject(path: NSBundle.mainBundle().pathForResource("events", ofType: "json") as String!)
     var eventsList: EventsList = EventsList()
     
     @IBOutlet weak var loading: UILabel!
@@ -27,6 +27,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
         super.viewDidLoad()
         
         eventsList = self.JsonEntity.JsonToEventsList(eventsList)
+        eventsList.shuffle()
 
         self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController
         self.pageViewController.dataSource = self
@@ -55,7 +56,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
     {
         let pageContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageContentHolderViewController") as! PageContentHolderViewController
 
-        pageContentViewController.event = eventsList.find(index) as! Event
+        pageContentViewController.event = eventsList.find(index) 
         pageContentViewController.pageIndex = index
         
         return pageContentViewController

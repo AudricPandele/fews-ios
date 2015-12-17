@@ -22,7 +22,7 @@ class ArticleTableViewController: UITableViewController {
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,6 +39,8 @@ class ArticleTableViewController: UITableViewController {
             cellIdentifier = "ImageCell"
         case 1:
             cellIdentifier = "TextCell"
+        case 2:
+            cellIdentifier = "MapCell"
         default: ()
         }
         
@@ -46,15 +48,25 @@ class ArticleTableViewController: UITableViewController {
         
         switch cellIdentifier {
         case "ImageCell":
-                if let url = NSURL(string: self.event.top_image.original) {
-                    (cell as! ImageCell).imageViewArticle.hnk_setImageFromURL(url)
-                }
-                (cell as! ImageCell).titleLabel.text = self.event.prepareArticleShortenTitle()
+            // BLUR IMAGE
+//            let darkBlur = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+//            let blurView = UIVisualEffectView(effect: darkBlur)
+//            blurView.frame = (cell as! ImageCell).imageViewArticle.bounds
+//            (cell as! ImageCell).imageViewArticle.addSubview(blurView)
+
+            if let url = NSURL(string: self.event.top_image.original){
+                (cell as! ImageCell).imageViewArticle.hnk_setImageFromURL(url)
+            }
+            (cell as! ImageCell).titleLabel.text = self.event.prepareArticleShortenTitle()
             
         case "TextCell":
-                (cell as! TextCell).articleLabel.text = textArticle
-                textRowHeight = (cell as! TextCell).articleLabel.frame.height
+            (cell as! TextCell).articleLabel.text = self.event.text[0]
+            textRowHeight = (cell as! TextCell).articleLabel.frame.height
             
+        case "MapCell":
+            print("test")
+            print(self.event.location)
+            (cell as! MapCell).location = self.event.location
         default: ()
         }
         

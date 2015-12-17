@@ -28,20 +28,17 @@ class PageContentHolderViewController: UIViewController {
         
         self.titleLabel.alpha = 0.0
         self.titleLabel.text = self.event.prepareArticleShortenTitle()
-        
-        let date = self.event.id.toDate(DateFormat.Custom("yyyyMMddHHmmss"))
-        self.eventDate.text = "\(date!.toRelativeString()) ago"
+        self.eventDate.text = "🔥 \(event.date.toRelativeString()!) ago"
         
         UIView.animateWithDuration(1.0, animations: {
             self.titleLabel.alpha = 1.0
         })
-        
+                
         if let url = NSURL(string: self.event.top_image.original) {
             imageView.hnk_setImageFromURL(url)
         }
         
         let sources: [UIImageView] = [self.imageSource, self.imageSource2, self.imageSource3]
-        print(zip(event.articles, sources))
         for (article, source) in zip(event.articles, sources) {
             if let url = NSURL(string: article.logo) {
                 source.hnk_setImageFromURL(url)

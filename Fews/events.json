@@ -1,14 +1,11 @@
-[
- {
- "_id": "20151216120000",
- "timestamp": "",
- "articles": [
-              {
+[{
+ "_id": "20151127120000",
+ "articles": [{
               "name": "TechCrunch",
               "origin": "http://feeds.feedburner.com/TechCrunch",
               "title": "Holy Smoke! New Raspberry Pi Zero Costs Just $5…",
               "link": "http://techcrunch.com/2015/11/26/raspberry-pi-zero/",
-              "logo": "https://fews.io/static/img/websites/usatoday.jpg"
+              "logo": "https://fews.io/static/img/websites/techcrunch.jpg"
               },
               {
               "name": "Mashable",
@@ -18,53 +15,90 @@
               "logo": "https://fews.io/static/img/websites/mashable.jpg"
               },
               {
-              "name": "TechCrunch",
+              "name": "USA Today",
               "origin": "http://feeds.feedburner.com/TechCrunch",
               "title": "Holy Smoke! New Raspberry Pi Zero Costs Just $5…",
               "link": "http://techcrunch.com/2015/11/26/raspberry-pi-zero/",
               "logo": "https://fews.io/static/img/websites/usatoday.jpg"
-              },
-              {
-              "name": "Mashable",
-              "origin": "http://feeds.mashable.com/mashable/tech",
-              "title": "Raspberry Pi Zero is a tiny computer that costs only $5",
-              "link": "http://mashable.com/2015/11/26/raspberry-pi-zero/",
-              "logo": "https://fews.io/static/img/websites/mashable.jpg"
               }
               ],
- 
  "top_image": { "low": "http://i68.servimg.com/u/f68/13/85/87/18/rsz_im10.jpg",
                 "original": "http://blogs-images.forbes.com/theopriestley/files/2015/11/rsz_img_4054-1200x837.jpg"
                 },
- "images": [
-            "http://blogs-images.forbes.com/theopriestley/files/2015/11/rsz_img_4054-1200x837.jpg"
-            ]
+ "images": ["http://blogs-images.forbes.com/theopriestley/files/2015/11/rsz_img_4054-1200x837.jpg"],
+ "text": [
+          "The Raspberry Pi Foundation has upped the ante when it comes to low cost single board computers, announcing a new addition to its family of microprocessors today, called Pi Zero. And it costs…  just $5. (£4 in the U.K.) Or it should cost $5, albeit you may have to shop around the various Pi resellers to get it for that baseline price.",
+          "The next cheapest Pi in the family is the Model A+ which costs $20. While this fall a Raspberry Pi rival/clone, called Orange Pi, also popped up, retailing for $15 so there’s no doubt that low cost computers are getting increasingly affordable. Whether $5 is the floor for a single board computer remains to be seen — Upton suggests this is as low as things can go for the foreseeable future at least."
+          ]
  },
  {
- "_id": "20151215000000",
- "timestamp": "",
+ "_id": "20151216150000",
  "articles": [
               {
-              "name": "TechCrunch",
-              "origin": "http://feeds.feedburner.com/TechCrunch",
-              "title": "Holy Smoke! New Raspberry Pi Zero Costs Just $5…",
-              "link": "http://techcrunch.com/2015/11/26/raspberry-pi-zero/",
-              "logo": "https://fews.io/static/img/websites/usatoday.jpg"
+              "name": "VentureBeat",
+              "origin": "",
+              "title": "Slack hits 2M daily active users, launches third-party App Directory, $80M developer fund",
+              "link": "http://venturebeat.com/2015/12/15/slack-hits-2m-daily-active-users-launches-third-party-app-directory-80m-developer-fund/",
+              "logo": "https://fews.io/static/img/websites/venturebeat.jpg"
               },
               {
-              "name": "Mashable",
-              "origin": "http://feeds.mashable.com/mashable/tech",
-              "title": "Yo",
-              "link": "http://mashable.com/2015/11/26/raspberry-pi-zero/",
-              "logo": "https://fews.io/static/img/websites/mashable.jpg"
+              "name": "Recode",
+              "origin": "",
+              "title": "Slack introduces $80M developer fund and extensive app directory",
+              "link": "http://recode.net/2015/12/15/slack-launches-80-million-fund-to-boost-third-party-development/",
+              "logo": "https://fews.io/static/img/websites/recode.jpg"
               }
               ],
  
- "top_image": { "low": "http://i68.servimg.com/u/f68/13/85/87/18/rsz_im10.jpg",
- "original": "http://blogs-images.forbes.com/theopriestley/files/2015/11/rsz_img_4054-1200x837.jpg"
+ "top_image": {
+ "low": "https://recodetech.files.wordpress.com/2015/05/h06a0003-3.jpg?quality=80&strip=info&w=1280",
+ "original": "https://recodetech.files.wordpress.com/2015/05/h06a0003-3.jpg?quality=80&strip=info&w=1280"
  },
  "images": [
             "http://blogs-images.forbes.com/theopriestley/files/2015/11/rsz_img_4054-1200x837.jpg"
-            ]
+            ],
+ "text": [
+          "The Raspberry Pi Foundation has upped the ante when it comes to low cost single board computers, announcing a new addition to its family of microprocessors today, called Pi Zero. And it costs…  just $5. (£4 in the U.K.) Or it should cost $5, albeit you may have to shop around the various Pi resellers to get it for that baseline price.",
+          "The next cheapest Pi in the family is the Model A+ which costs $20. While this fall a Raspberry Pi rival/clone, called Orange Pi, also popped up, retailing for $15 so there’s no doubt that low cost computers are getting increasingly affordable. Whether $5 is the floor for a single board computer remains to be seen — Upton suggests this is as low as things can go for the foreseeable future at least."
+          ]
+},
+{
+ "_id": "20151211000000",
+ "articles": [
+              {
+              "name": "New York Times",
+              "origin": "",
+              "title": "Artificial-Intelligence Research Center Is Founded by Silicon Valley Investors",
+              "link": "http://www.nytimes.com/2015/12/12/science/artificial-intelligence-research-center-is-founded-by-silicon-valley-investors.html?_r=0",
+              "logo": "https://fews.io/static/img/websites/newyorktimes.jpg"
+              },
+              {
+              "name": "The Next Web",
+              "origin": "",
+              "title": "OpenAI is a $1 billion nonprofit dedicated to Artificial Intelligence research",
+              "link": "http://thenextweb.com/insider/2015/12/11/openai-is-a-1-billion-nonprofit-dedicated-to-artificial-intelligence-research/",
+              "logo": "https://fews.io/static/img/websites/thenextweb.jpg"
+              },
+              {
+              "name": "Wired",
+              "origin": "",
+              "title": "Elon Musk Snags Top Google Researcher for New AI Non-Profit",
+              "link": "http://www.wired.com/2015/12/elon-musk-snags-top-google-researcher-for-new-ai-non-profit/",
+              "logo": "https://fews.io/static/img/websites/wired.jpg"
+              }
+              ],
+ 
+ "top_image": {
+ "low": "https://recodetech.files.wordpress.com/2015/05/h06a0003-3.jpg?quality=80&strip=info&w=1280",
+ "original": "http://static01.nyt.com/images/2015/12/12/science/12valley-web/12valley-web-master675.jpg"
+ },
+ 
+ "images": [
+            "http://blogs-images.forbes.com/theopriestley/files/2015/11/rsz_img_4054-1200x837.jpg"
+            ],
+ "text": [
+          "The Raspberry Pi Foundation has upped the ante when it comes to low cost single board computers, announcing a new addition to its family of microprocessors today, called Pi Zero. And it costs…  just $5. (£4 in the U.K.) Or it should cost $5, albeit you may have to shop around the various Pi resellers to get it for that baseline price.",
+          "The next cheapest Pi in the family is the Model A+ which costs $20. While this fall a Raspberry Pi rival/clone, called Orange Pi, also popped up, retailing for $15 so there’s no doubt that low cost computers are getting increasingly affordable. Whether $5 is the floor for a single board computer remains to be seen — Upton suggests this is as low as things can go for the foreseeable future at least."
+          ],
  }
 ]

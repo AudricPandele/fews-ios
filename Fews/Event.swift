@@ -8,22 +8,27 @@
 
 import UIKit
 import SwiftyJSON
+import SwiftDate
 
 class Event: NSObject {
 
     var id: String!
-    var timestamp: String!
+    var date: NSDate!
     var articles: [Article]!
     var top_image: TopImage!
     var images: [String]!
+    var text: [String]!
+    var location: String!
     
-    init(id: String, timestamp: String, articles: [Article], top_image: TopImage, images: [String]){
+    init(id: String, articles: [Article], top_image: TopImage, images: [String], text: [String]){
         
         self.id = id
-        self.timestamp = timestamp
+        self.date = id.toDate(DateFormat.Custom("yyyyMMddHHmmss"))!
         self.articles = articles
         self.top_image = top_image
         self.images = images
+        self.text = text
+        self.location = "27 rue huguerie"
     }
     
     func findArticle(index: Int) -> NSObject {
@@ -38,7 +43,6 @@ class Event: NSObject {
         return self.articles.count
     }
     
-    // Retrieve the shorten article title in an event
     func prepareArticleShortenTitle() -> String {
         return articles.sort({ $0.title.characters.count < $1.title.characters.count })[0].title
     }

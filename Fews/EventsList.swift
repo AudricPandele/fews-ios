@@ -7,17 +7,22 @@
 //
 
 import UIKit
+import SwiftDate
 
 class EventsList: NSObject {
     static let sharedInstance = EventsList()
     
-    var events: [NSObject]
+    var events: [Event]
     
     override init(){
         self.events = []
     }
     
-    func find(index: Int) -> NSObject {
+    func shuffle(){
+        self.events.sortInPlace({ $0.id.toDate(DateFormat.Custom("yyyyMMddHHmmss")) > $1.id.toDate(DateFormat.Custom("yyyyMMddHHmmss")) })
+    }
+    
+    func find(index: Int) -> Event {
         if index < self.lenght() {
             return self.events[index]
         } else {
@@ -25,7 +30,7 @@ class EventsList: NSObject {
         }
     }
     
-    func add(event: NSObject) -> Void{
+    func add(event: Event) -> Void{
         self.events.append(event)
     }
     
