@@ -23,8 +23,10 @@
 		D553BB9CF973668EC58E91CF /* Pods_Fews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2EA6F4D8A56272EC74C0890 /* Pods_Fews.framework */; };
 		EB1724EF1C219680000833F5 /* SwiftDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1724EE1C219680000833F5 /* SwiftDate.framework */; };
 		EB3C5F491C1C782C004C7C13 /* JsonObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3C5F481C1C782C004C7C13 /* JsonObject.swift */; };
+		EB67A9B81C260A3A006D0A85 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67A9B71C260A3A006D0A85 /* UIColor.swift */; };
 		EB78FD101C22154F0067F826 /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB78FD0F1C22154F0067F826 /* MapCell.swift */; };
 		EB78FD121C2227980067F826 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB78FD111C2227980067F826 /* Entity.swift */; };
+		EBAC6C5F1C233D53005740D6 /* SKSplashView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBAC6C5E1C233D53005740D6 /* SKSplashView.framework */; };
 		EBDD9B631C20B3DF00434A40 /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBDD9B621C20B3DF00434A40 /* Haneke.framework */; };
 		EBDD9B671C20C25D00434A40 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDD9B661C20C25D00434A40 /* Event.swift */; };
 		EBDD9B691C20CF2B00434A40 /* events.json in Resources */ = {isa = PBXBuildFile; fileRef = EBDD9B681C20CF2B00434A40 /* events.json */; };
@@ -54,8 +56,10 @@
 		E2EA6F4D8A56272EC74C0890 /* Pods_Fews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB1724EE1C219680000833F5 /* SwiftDate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDate.framework; path = "Pods/../build/Debug-iphoneos/SwiftDate.framework"; sourceTree = "<group>"; };
 		EB3C5F481C1C782C004C7C13 /* JsonObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonObject.swift; sourceTree = "<group>"; };
+		EB67A9B71C260A3A006D0A85 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		EB78FD0F1C22154F0067F826 /* MapCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
 		EB78FD111C2227980067F826 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		EBAC6C5E1C233D53005740D6 /* SKSplashView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SKSplashView.framework; path = "Pods/../build/Debug-iphoneos/SKSplashView.framework"; sourceTree = "<group>"; };
 		EBDD9B621C20B3DF00434A40 /* Haneke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Haneke.framework; path = "Pods/../build/Debug-iphoneos/Haneke.framework"; sourceTree = "<group>"; };
 		EBDD9B661C20C25D00434A40 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		EBDD9B681C20CF2B00434A40 /* events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = events.json; sourceTree = "<group>"; };
@@ -69,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBAC6C5F1C233D53005740D6 /* SKSplashView.framework in Frameworks */,
 				EB1724EF1C219680000833F5 /* SwiftDate.framework in Frameworks */,
 				EBDD9B631C20B3DF00434A40 /* Haneke.framework in Frameworks */,
 				82A8DA671C1834B000799225 /* SwiftyJSON.framework in Frameworks */,
@@ -82,6 +87,7 @@
 		0235245399A28413952D9799 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EBAC6C5E1C233D53005740D6 /* SKSplashView.framework */,
 				EB1724EE1C219680000833F5 /* SwiftDate.framework */,
 				EBDD9B621C20B3DF00434A40 /* Haneke.framework */,
 				82A8DA661C1834B000799225 /* SwiftyJSON.framework */,
@@ -152,6 +158,7 @@
 		82A8DA4B1C18247B00799225 /* Fews */ = {
 			isa = PBXGroup;
 			children = (
+				EB67A9B61C2609CA006D0A85 /* extensions */,
 				8210316C1C20555200E46A5B /* Json */,
 				EB3C5F471C1C7778004C7C13 /* models */,
 				8210316F1C2058F500E46A5B /* controllers */,
@@ -175,6 +182,14 @@
 				EBDD9B6A1C20CFAC00434A40 /* Article.swift */,
 			);
 			name = models;
+			sourceTree = "<group>";
+		};
+		EB67A9B61C2609CA006D0A85 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EB67A9B71C260A3A006D0A85 /* UIColor.swift */,
+			);
+			name = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBDD9B6D1C20D1E300434A40 /* EventsList.swift in Sources */,
+				EB67A9B81C260A3A006D0A85 /* UIColor.swift in Sources */,
 				EBDD9B671C20C25D00434A40 /* Event.swift in Sources */,
 				EB78FD101C22154F0067F826 /* MapCell.swift in Sources */,
 				82A8DA4F1C18247B00799225 /* ViewController.swift in Sources */,

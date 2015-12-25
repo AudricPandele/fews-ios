@@ -54,4 +54,12 @@ class Event: NSObject {
     func shareEvent() -> String {
         return "Check out the event \(self.prepareEventShareUrl()) w/ @Fewsio"
     }
+    
+    func dateToString(isHot: Bool = true) -> String {
+        let date = "\(self.date.toRelativeString()!) ago"
+        if isHot {
+            return "🔥 \(date)"
+        }
+        return date
+    }
 }

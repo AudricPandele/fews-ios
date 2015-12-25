@@ -22,18 +22,27 @@ class PageContentHolderViewController: UIViewController {
     
     var pageIndex: Int!
     var event: Event!
+        
+    override func viewWillAppear(animated: Bool) {
+        if let gest = self.view.gestureRecognizers{
+            for gR: UIGestureRecognizer in gest {
+                gR.delegate = (self as! UIGestureRecognizerDelegate)
+            }
+        }
+        self
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.titleLabel.alpha = 0.0
         self.titleLabel.text = self.event.prepareArticleShortenTitle()
-        self.eventDate.text = "🔥 \(event.date.toRelativeString()!) ago"
+        self.eventDate.text = self.event.dateToString()
         
         UIView.animateWithDuration(1.0, animations: {
             self.titleLabel.alpha = 1.0
         })
-                
+        
         if let url = NSURL(string: self.event.top_image.original) {
             imageView.hnk_setImageFromURL(url)
         }
@@ -72,6 +81,9 @@ class PageContentHolderViewController: UIViewController {
         
     }
     
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        print(scrollView.contentOffset.y)
+    }
     
     @IBAction func goToArticle(sender: AnyObject) {
         performSegueWithIdentifier("ArticleViewController", sender: self)

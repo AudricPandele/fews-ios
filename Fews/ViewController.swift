@@ -10,7 +10,7 @@ import UIKit
 import SwiftyJSON
 import SwiftDate
 
-class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate, UIScrollViewDelegate {
     
 //    var pageTopImages: NSArray! = []
 //    var pageTitles: NSArray! = []
@@ -23,8 +23,27 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
     @IBOutlet weak var loading: UILabel!
     var overlay : UIView?
     
+    override func viewWillAppear(animated: Bool) {
+        UIApplication.sharedApplication().statusBarHidden=true;
+        pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController
+        
+        for view in self.pageViewController.view.subviews {
+            if let scrollView = view as? UIScrollView {
+                scrollView.delegate = self
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController
+
+        for view in self.pageViewController.view.subviews {
+            if let scrollView = view as? UIScrollView {
+                scrollView.delegate = self
+            }
+        }
         
         eventsList = self.JsonEntity.JsonToEventsList(eventsList)
         eventsList.shuffle()
@@ -127,6 +146,11 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
         return 0
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        print("ok")
+        print(scrollView.contentOffset.y)
     }
 
 }

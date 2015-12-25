@@ -19,10 +19,20 @@ class ArticleTableViewController: UITableViewController {
 
     override func viewWillAppear(animated: Bool) {
         tableView.contentOffset.y = 0.0
+        UIApplication.sharedApplication().statusBarHidden = true;
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+    }
+    
+    @IBAction func handleLongPress(sender: UILongPressGestureRecognizer) {
+        let p: CGPoint = sender.locationInView(sender.view)
+        sharing()
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,6 +51,8 @@ class ArticleTableViewController: UITableViewController {
             cellIdentifier = "TextCell"
         case 2:
             cellIdentifier = "MapCell"
+        case 3:
+            cellIdentifier = "TextCell2"
         default: ()
         }
         
@@ -63,9 +75,11 @@ class ArticleTableViewController: UITableViewController {
             (cell as! TextCell).articleLabel.text = self.event.text[0]
             textRowHeight = (cell as! TextCell).articleLabel.frame.height
             
+        case "TextCell2":
+            (cell as! TextCell).articleLabel.text = self.event.text[1]
+            textRowHeight = (cell as! TextCell).articleLabel.frame.height
+            
         case "MapCell":
-            print("test")
-            print(self.event.location)
             (cell as! MapCell).location = self.event.location
         default: ()
         }
@@ -97,7 +111,7 @@ class ArticleTableViewController: UITableViewController {
         self.dismissViewControllerAnimated(true, completion: {});
     }
     
-    @IBAction func share(sender: AnyObject) {
+    func sharing(){
         if let myWebsite = NSURL(string: "url_of_event")
         {
             let objectsToShare = [event.shareEvent(), myWebsite]
@@ -109,17 +123,51 @@ class ArticleTableViewController: UITableViewController {
             
             self.presentViewController(activityVC, animated: true, completion: nil)
         }
-        
+    }
+    
+    @IBAction func share(sender: AnyObject) {
+        sharing()
     }
 
     
     // MARK: - Scroll view delegate
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {
+        
         if let imageCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as? ImageCell {
             imageCell.scrollViewDidScroll(scrollView)
+            
+            if scrollView.contentOffset.y >= 50 {
+                if let url = NSURL(string: self.event.top_image.low){
+                    imageCell.imageViewArticle?.hnk_setImageFromURL(url)
+                }
+                let t: CGFloat = (50/scrollView.contentOffset.y)
+                imageCell.titleLabel.alpha = t
+                if t <= 0.25 {
+                    imageCell.titleLabel.hidden = true
+                } else {
+                    imageCell.titleLabel.hidden = false
+                }
+            } else {
+                if let url = NSURL(string: self.event.top_image.original){
+                    imageCell.titleLabel.alpha = 1
+                    imageCell.imageViewArticle?.hnk_setImageFromURL(url)
+                }
+            }
         }
-    
+        
+        if scrollView.contentOffset.y >= 257 {
+            self.navigationController?.navigationBar.backgroundColor = UIColor.FewsGreyBlackColor()
+            self.navigationController?.navigationBar.translucent = true
+            self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+            self.title = self.event.dateToString(false).uppercaseString
+
+        } else {
+                self.navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
+                self.navigationController?.navigationBar.translucent = true
+            self.title = ""
+            }
+        
         if scrollView.contentOffset.y <= -140 {
             self.dismissViewControllerAnimated(true, completion: {});
 
