@@ -15,8 +15,8 @@ class ArticleTableViewController: UITableViewController {
     var titleArticle: String!
     var textArticle: String!
     var event: Event!
-    var textRowHeight: CGFloat! = 10
-
+    var storedOffsets = [Int: CGFloat]()
+    
     override func viewWillAppear(animated: Bool) {
         tableView.contentOffset.y = 0.0
         UIApplication.sharedApplication().statusBarHidden = true;
@@ -32,7 +32,7 @@ class ArticleTableViewController: UITableViewController {
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 4
+        return 5
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,9 +50,12 @@ class ArticleTableViewController: UITableViewController {
         case 1:
             cellIdentifier = "TextCell"
         case 2:
-            cellIdentifier = "MapCell"
+            cellIdentifier = "CitationCell"
         case 3:
             cellIdentifier = "TextCell2"
+        case 4:
+            cellIdentifier = "CollectionCell"
+        
         default: ()
         }
         
@@ -60,11 +63,6 @@ class ArticleTableViewController: UITableViewController {
         
         switch cellIdentifier {
         case "ImageCell":
-            // BLUR IMAGE
-//            let darkBlur = UIBlurEffect(style: UIBlurEffectStyle.Dark)
-//            let blurView = UIVisualEffectView(effect: darkBlur)
-//            blurView.frame = (cell as! ImageCell).imageViewArticle.bounds
-//            (cell as! ImageCell).imageViewArticle.addSubview(blurView)
 
             if let url = NSURL(string: self.event.top_image.original){
                 (cell as! ImageCell).imageViewArticle.hnk_setImageFromURL(url)
@@ -73,14 +71,20 @@ class ArticleTableViewController: UITableViewController {
             
         case "TextCell":
             (cell as! TextCell).articleLabel.text = self.event.text[0]
-            textRowHeight = (cell as! TextCell).articleLabel.frame.height
+
+        case "CitationCell":
+            (cell as! CitationCell).CitationLabel.text = "\(self.event.quote)"
+            (cell as! CitationCell).CitationLabel.font = UIFont(name: "HelveticaNeue-Italic", size: CGFloat(23))
+            (cell as! CitationCell).CitationLabel.textColor = UIColor.FewsBlueColor()
             
         case "TextCell2":
             (cell as! TextCell).articleLabel.text = self.event.text[1]
-            textRowHeight = (cell as! TextCell).articleLabel.frame.height
             
-        case "MapCell":
-            (cell as! MapCell).location = self.event.location
+        case "CollectionCell":
+            (cell as! TableViewCell).setCollectionViewDataSourceDelegate(self, forRow: indexPath.row)
+            (cell as! TableViewCell).collectionViewOffset = storedOffsets[indexPath.row] ?? 0
+            
+
         default: ()
         }
         
@@ -93,19 +97,16 @@ class ArticleTableViewController: UITableViewController {
             return 300
         case 1:
             return 200
+        case 2:
+            return 120
+        case 3:
+            return 200
+        case 4:
+            return 430
         default: ()
         return 200
         }
     }
-    
-//    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-//        switch indexPath.section {
-//        case 0:
-//            return 200
-//        default: ()
-//        return 150
-//        }
-//    }
     
     @IBAction func close(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: {});
@@ -128,9 +129,6 @@ class ArticleTableViewController: UITableViewController {
     @IBAction func share(sender: AnyObject) {
         sharing()
     }
-
-    
-    // MARK: - Scroll view delegate
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {
         
@@ -173,8 +171,49 @@ class ArticleTableViewController: UITableViewController {
 
         }
     }
-    
-    
 }
 
+extension ArticleTableViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        var cellIdentifier = ""
+        switch indexPath.row {
+        case 0:
+            cellIdentifier = "MapCell"
+        case 1:
+            cellIdentifier = "WikiCell"
+            
+        default: ()
+        }
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath)
+        
+        switch cellIdentifier {
+        case "MapCell":
+            (cell as! MapCollectionViewCell).layer.borderColor = UIColor.FewsGreyBorderColor().CGColor
+            (cell as! MapCollectionViewCell).layer.borderWidth = 1
+            (cell as! MapCollectionViewCell).layer.cornerRadius = 5
+            (cell as! MapCollectionViewCell).location = self.event.location
+            
+        case "WikiCell":
+            (cell as! WikiCollectionViewCell).layer.borderColor = UIColor.FewsGreyBorderColor().CGColor
+            (cell as! WikiCollectionViewCell).layer.borderWidth = 1
+            (cell as! WikiCollectionViewCell).layer.cornerRadius = 5
+            (cell as! WikiCollectionViewCell).titleLabel.text = event.wikipedias[0].name
+            (cell as! WikiCollectionViewCell).textLabel.text = event.wikipedias[0].text
+
+        default: ()
+        }
+        
+        return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        print("Collection view at row \(collectionView.tag) selected index path \(indexPath.row)")
+    }
+}

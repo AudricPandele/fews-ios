@@ -37,8 +37,11 @@ class JsonObject: NSObject {
         let topImage: TopImage = JsonToTopImage(event)
         let imagesList: [String] = JsonToImages(event)
         let textList: [String] = JsonToText(event)
+        let quote: String = JsonQuote(event)
+        let location: String = JsonLocation(event)
+        let wikipedias: [WikipediaObject] = JsonToWikipediaProduct(event)
         
-        let event: Event = Event(id: event["_id"].string!, articles: articles, top_image: topImage, images: imagesList, text: textList)
+        let event: Event = Event(id: event["_id"].string!, articles: articles, top_image: topImage, images: imagesList, text: textList, quote: quote, location: location, wikipedias: wikipedias)
         return event
     }
 
@@ -76,6 +79,62 @@ class JsonObject: NSObject {
         }
         return imagesList
     }
+    
+    func JsonToWikipediaProduct(event: JSON) -> [WikipediaObject]{
+        var wikipedias: [WikipediaObject] = []
+        let default_photo = ""
+        let default_twitter = ""
+        
+        if let products = event["products"].array {
+            for product in products {
+                if (product["source_name"] == "wikipedia"){
+                    
+                    let wikipedia: WikipediaObject = WikipediaObject(name: product["name"].string!, source_url: product["source_url"].string!, text: product["text"].string!, photo: default_photo, twitter: default_twitter)
+                    
+//                    NSLog("\(wikipedia)")
+                    wikipedias.append(wikipedia)
+                }
+            }
+        }
+        
+        if let companies = event["companies"].array {
+            for company in companies {
+                if (company["source_name"] == "wikipedia"){
+                    let wikipedia: WikipediaObject = WikipediaObject(name: company["name"].string!, source_url: company["source_url"].string!, text: company["text"].string!, photo: default_photo, twitter: default_twitter)
+                    wikipedias.append(wikipedia)
+                }
+            }
+        }
+        
+        if let peoples = event["peoples"].array {
+            for people in peoples {
+                if (people["source_name"] == "wikipedia"){
+                    let wikipedia: WikipediaObject = WikipediaObject(name: people["name"].string!, source_url: people["source_url"].string!, text: people["text"].string!, photo: default_photo, twitter: default_twitter)
+                    wikipedias.append(wikipedia)
+                }
+            }
+        }
+        
+        if let organizations = event["organizations"].array {
+            for organization in organizations {
+                if (organization["source_name"] == "wikipedia"){
+                    let wikipedia: WikipediaObject = WikipediaObject(name: organization["name"].string!, source_url: organization["source_url"].string!, text: organization["text"].string!, photo: default_photo, twitter: default_twitter)
+                    wikipedias.append(wikipedia)
+                }
+            }
+        }
+        
+        return wikipedias
+    }
+    
+    func JsonQuote(event: JSON) -> String {
+        return event["quotes"][0]["text"].string!
+    }
+    
+    func JsonLocation(event: JSON) -> String {
+        return event["locations"][0].string!
+    }
+
 
     func addToJson(data: NSData){
         self.readableJSON = JSON(self.readableJSON.arrayObject! + JSON(data: data).arrayObject!)

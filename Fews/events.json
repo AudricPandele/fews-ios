@@ -1,104 +1,96 @@
-[{
- "_id": "20151127120000",
- "articles": [{
-              "name": "TechCrunch",
-              "origin": "http://feeds.feedburner.com/TechCrunch",
-              "title": "Holy Smoke! New Raspberry Pi Zero Costs Just $5…",
-              "link": "http://techcrunch.com/2015/11/26/raspberry-pi-zero/",
-              "logo": "https://fews.io/static/img/websites/techcrunch.jpg"
-              },
-              {
-              "name": "Mashable",
-              "origin": "http://feeds.mashable.com/mashable/tech",
-              "title": "Raspberry Pi Zero is a tiny computer that costs only $5",
-              "link": "http://mashable.com/2015/11/26/raspberry-pi-zero/",
-              "logo": "https://fews.io/static/img/websites/mashable.jpg"
-              },
-              {
-              "name": "USA Today",
-              "origin": "http://feeds.feedburner.com/TechCrunch",
-              "title": "Holy Smoke! New Raspberry Pi Zero Costs Just $5…",
-              "link": "http://techcrunch.com/2015/11/26/raspberry-pi-zero/",
-              "logo": "https://fews.io/static/img/websites/usatoday.jpg"
-              }
-              ],
- "top_image": { "low": "http://i68.servimg.com/u/f68/13/85/87/18/rsz_im10.jpg",
-                "original": "http://blogs-images.forbes.com/theopriestley/files/2015/11/rsz_img_4054-1200x837.jpg"
-                },
- "images": ["http://blogs-images.forbes.com/theopriestley/files/2015/11/rsz_img_4054-1200x837.jpg"],
- "text": [
-          "The Raspberry Pi Foundation has upped the ante when it comes to low cost single board computers, announcing a new addition to its family of microprocessors today, called Pi Zero. And it costs…  just $5. (£4 in the U.K.) Or it should cost $5, albeit you may have to shop around the various Pi resellers to get it for that baseline price.",
-          "The next cheapest Pi in the family is the Model A+ which costs $20. While this fall a Raspberry Pi rival/clone, called Orange Pi, also popped up, retailing for $15 so there’s no doubt that low cost computers are getting increasingly affordable. Whether $5 is the floor for a single board computer remains to be seen — Upton suggests this is as low as things can go for the foreseeable future at least."
-          ]
- },
+[
  {
- "_id": "20151216150000",
- "articles": [
-              {
-              "name": "VentureBeat",
-              "origin": "",
-              "title": "Slack hits 2M daily active users, launches third-party App Directory, $80M developer fund",
-              "link": "http://venturebeat.com/2015/12/15/slack-hits-2m-daily-active-users-launches-third-party-app-directory-80m-developer-fund/",
-              "logo": "https://fews.io/static/img/websites/venturebeat.jpg"
-              },
-              {
-              "name": "Recode",
-              "origin": "",
-              "title": "Slack introduces $80M developer fund and extensive app directory",
-              "link": "http://recode.net/2015/12/15/slack-launches-80-million-fund-to-boost-third-party-development/",
-              "logo": "https://fews.io/static/img/websites/recode.jpg"
-              }
+    "_id": "20160101000000",
+    "_rev": "7-1c99be43e925ddd06a320946ed6bbf2f",
+    "timestamp": 1452069369,
+    "articles": [
+                 {
+                 "name": "TechCrunch",
+                 "origin": "http://feeds.feedburner.com/TechCrunch",
+                 "title": "Holy Smoke! New Raspberry Pi Zero Costs Just $5…",
+                 "link": "http://techcrunch.com/2015/11/26/raspberry-pi-zero/",
+                 "logo": "https://fews.io/static/img/websites/usatoday.jpg"
+                 },
+                 {
+                 "name": "Mashable",
+                 "origin": "http://feeds.mashable.com/mashable/tech",
+                 "title": "Raspberry Pi Zero is a tiny computer that costs only $5",
+                 "link": "http://mashable.com/2015/11/26/raspberry-pi-zero/",
+                 "logo": "https://fews.io/static/img/websites/mashable.jpg"
+                 }
+                 ],
+    "top_image": {
+        "low": "http://i68.servimg.com/u/f68/13/85/87/18/rsz_im10.jpg",
+        "original": "http://blogs-images.forbes.com/theopriestley/files/2015/11/rsz_img_4054-1200x837.jpg"
+    },
+    "images": [
+               "http://blogs-images.forbes.com/theopriestley/files/2015/11/rsz_img_4054-1200x837.jpg"
+               ],
+    "quotes": [
+               {
+               "person": "Pi co-founder Eben Upton",
+               "text": "We really hope this is going to get those last few people in the door and involved in computer programming"
+               }
+               ],
+    "products": [
+                 {
+                 "name": "Raspberry Pi",
+                 "source_name": "wikipedia",
+                 "source_url": "https://en.wikipedia.org/wiki/Raspberry_Pi",
+                 "text": "The Raspberry Pi is a series of credit card–sized single-board computers developed in the United Kingdom by the Raspberry Pi Foundation with the intention of promoting the teaching of basic computer science in schools and developing countries."
+                 }
+                 ],
+    "companies": [
+    ],
+    "people": [
+               {
+               "name": "Eben Upton",
+               "source_name": "wikipedia",
+               "source_url": "https://en.wikipedia.org/wiki/Eben_Upton",
+               "text": "Eben Christopher Upton (born 5 April 1978) is a Technical Director and ASIC architect for Broadcom. He is also a founder and former trustee of the Raspberry Pi Foundation, and now CEO of the Raspberry PI trading company.[4] He is also responsible for the overall software and hardware architecture of the Raspberry Pi device.",
+               "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/EbenUpton.jpeg/400px-EbenUpton.jpeg",
+               "twitter": "http://twitter.com/EbenUpton"
+               }
+               ],
+    "organizations": [
+                      {
+                      "name": "Raspberry Pi Foundation",
+                      "source_name": "wikipedia",
+                      "source_url": "https://en.wikipedia.org/wiki/Raspberry_Pi_Foundation",
+                      "text": "The Raspberry Pi Foundation is a charity founded in 2009 to promote the study of basic computer science in schools, and is responsible for developing a single-board computer called the Raspberry Pi."
+                      }
+                      ],
+    "money": [
+              "$5",
+              "£4",
+              "$15",
+              "$20"
               ],
- 
- "top_image": {
- "low": "https://recodetech.files.wordpress.com/2015/05/h06a0003-3.jpg?quality=80&strip=info&w=1280",
- "original": "https://recodetech.files.wordpress.com/2015/05/h06a0003-3.jpg?quality=80&strip=info&w=1280"
- },
- "images": [
-            "http://blogs-images.forbes.com/theopriestley/files/2015/11/rsz_img_4054-1200x837.jpg"
-            ],
- "text": [
-          "The Raspberry Pi Foundation has upped the ante when it comes to low cost single board computers, announcing a new addition to its family of microprocessors today, called Pi Zero. And it costs…  just $5. (£4 in the U.K.) Or it should cost $5, albeit you may have to shop around the various Pi resellers to get it for that baseline price.",
-          "The next cheapest Pi in the family is the Model A+ which costs $20. While this fall a Raspberry Pi rival/clone, called Orange Pi, also popped up, retailing for $15 so there’s no doubt that low cost computers are getting increasingly affordable. Whether $5 is the floor for a single board computer remains to be seen — Upton suggests this is as low as things can go for the foreseeable future at least."
-          ]
-},
-{
- "_id": "20151211000000",
- "articles": [
-              {
-              "name": "New York Times",
-              "origin": "",
-              "title": "Artificial-Intelligence Research Center Is Founded by Silicon Valley Investors",
-              "link": "http://www.nytimes.com/2015/12/12/science/artificial-intelligence-research-center-is-founded-by-silicon-valley-investors.html?_r=0",
-              "logo": "https://fews.io/static/img/websites/newyorktimes.jpg"
-              },
-              {
-              "name": "The Next Web",
-              "origin": "",
-              "title": "OpenAI is a $1 billion nonprofit dedicated to Artificial Intelligence research",
-              "link": "http://thenextweb.com/insider/2015/12/11/openai-is-a-1-billion-nonprofit-dedicated-to-artificial-intelligence-research/",
-              "logo": "https://fews.io/static/img/websites/thenextweb.jpg"
-              },
-              {
-              "name": "Wired",
-              "origin": "",
-              "title": "Elon Musk Snags Top Google Researcher for New AI Non-Profit",
-              "link": "http://www.wired.com/2015/12/elon-musk-snags-top-google-researcher-for-new-ai-non-profit/",
-              "logo": "https://fews.io/static/img/websites/wired.jpg"
-              }
-              ],
- 
- "top_image": {
- "low": "https://recodetech.files.wordpress.com/2015/05/h06a0003-3.jpg?quality=80&strip=info&w=1280",
- "original": "http://static01.nyt.com/images/2015/12/12/science/12valley-web/12valley-web-master675.jpg"
- },
- 
- "images": [
-            "http://blogs-images.forbes.com/theopriestley/files/2015/11/rsz_img_4054-1200x837.jpg"
-            ],
- "text": [
-          "The Raspberry Pi Foundation has upped the ante when it comes to low cost single board computers, announcing a new addition to its family of microprocessors today, called Pi Zero. And it costs…  just $5. (£4 in the U.K.) Or it should cost $5, albeit you may have to shop around the various Pi resellers to get it for that baseline price.",
-          "The next cheapest Pi in the family is the Model A+ which costs $20. While this fall a Raspberry Pi rival/clone, called Orange Pi, also popped up, retailing for $15 so there’s no doubt that low cost computers are getting increasingly affordable. Whether $5 is the floor for a single board computer remains to be seen — Upton suggests this is as low as things can go for the foreseeable future at least."
-          ],
- }
+    "locations": [
+                  "U.K."
+                  ],
+    "text": [
+             "The Raspberry Pi Foundation has upped the ante when it comes to low cost single board computers, announcing a new addition to its family of microprocessors today, called Pi Zero. And it costs…  just $5. (£4 in the U.K.) Or it should cost $5, albeit you may have to shop around the various Pi resellers to get it for that baseline price.",
+             "The next cheapest Pi in the family is the Model A+ which costs $20. While this fall a Raspberry Pi rival/clone, called Orange Pi, also popped up, retailing for $15 so there’s no doubt that low cost computers are getting increasingly affordable. Whether $5 is the floor for a single board computer remains to be seen — Upton suggests this is as low as things can go for the foreseeable future at least.Pi rival/clone, called Orange Pi, also popped up, retailing for $15 so there’s no doubt that low cost computers are getting increasingly affordable. Whether $5 is the floor for a single board computer remains to be seen — Upton suggests this is as low as things can go for the foreseeable future at least."
+             ],
+    "summary": [
+                "sentence1",
+                "sentence2",
+                "sentence3"
+                ],
+    "tweets": [
+               {
+               "id": 48735758,
+               "text": "hello",
+               "username": "alicebonasio",
+               "blockquote": "<blockquote class=\"twitter-tweet\" lang=\"en\"><p lang=\"en\" dir=\"ltr\">Holy Smoke! New Raspberry Pi Zero Costs Just $5… <a href=\"https://t.co/Iwc0qS5KDW\">https://t.co/Iwc0qS5KDW</a> via <a href=\"https://twitter.com/TechCrunch\">@techcrunch</a></p>&mdash; Alice Bonasio (@alicebonasio) <a href=\"https://twitter.com/alicebonasio/status/674268807955922944\">December 8, 2015</a></blockquote>"
+               }
+               ],
+    "videos": [
+               {
+               "type": "vimeo",
+               "iframe": "<iframe src=\"https://player.vimeo.com/video/146893658\" width=\"500\" height=\"281\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+               }
+               ]
+}
 ]

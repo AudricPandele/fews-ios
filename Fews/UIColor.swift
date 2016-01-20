@@ -19,4 +19,8 @@ extension UIColor {
     class func FewsGreyBlackColor() -> UIColor {
         return UIColor(red: 0.14, green: 0.14, blue: 0.14, alpha: 1)
     }
+    
+    class func FewsGreyBorderColor() -> UIColor {
+        return UIColor(red: 0.91, green: 0.91, blue: 0.91, alpha: 1)
+    }
 }
