@@ -13,6 +13,7 @@
 		823872D71C4FC787000BB097 /* WikipediaObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823872D61C4FC787000BB097 /* WikipediaObject.swift */; };
 		82680D331C2020190056EC7E /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82680D321C2020190056EC7E /* ImageCell.swift */; };
 		828383F11C201C3A00A774E1 /* ArticleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828383F01C201C3A00A774E1 /* ArticleTableViewController.swift */; };
+		829D5CF01C592D24008EC4B5 /* WikiCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829D5CEF1C592D24008EC4B5 /* WikiCollectionView.swift */; };
 		829D7DD41C202ED2009F21C5 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829D7DD31C202ED2009F21C5 /* TextCell.swift */; };
 		82A8DA4D1C18247B00799225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8DA4C1C18247B00799225 /* AppDelegate.swift */; };
 		82A8DA4F1C18247B00799225 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8DA4E1C18247B00799225 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 		823872D61C4FC787000BB097 /* WikipediaObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikipediaObject.swift; sourceTree = "<group>"; };
 		82680D321C2020190056EC7E /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		828383F01C201C3A00A774E1 /* ArticleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewController.swift; sourceTree = "<group>"; };
+		829D5CEF1C592D24008EC4B5 /* WikiCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikiCollectionView.swift; sourceTree = "<group>"; };
 		829D7DD31C202ED2009F21C5 /* TextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		82A8DA491C18247B00799225 /* Fews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82A8DA4C1C18247B00799225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				823872D21C4F8A15000BB097 /* MapCollectionViewCell.swift */,
 				823872D01C4F80D8000BB097 /* TableViewCell.swift */,
 				82680D321C2020190056EC7E /* ImageCell.swift */,
+				829D5CEF1C592D24008EC4B5 /* WikiCollectionView.swift */,
 				829D7DD31C202ED2009F21C5 /* TextCell.swift */,
 				82B6C8FD1C3D076200C9A42A /* CitationCell.swift */,
 			);
@@ -331,6 +334,7 @@
 				EBDD9B671C20C25D00434A40 /* Event.swift in Sources */,
 				823872D51C4F8B50000BB097 /* WikiCollectionViewCell.swift in Sources */,
 				82A8DA4F1C18247B00799225 /* ViewController.swift in Sources */,
+				829D5CF01C592D24008EC4B5 /* WikiCollectionView.swift in Sources */,
 				EBDD9B6B1C20CFAC00434A40 /* Article.swift in Sources */,
 				828383F11C201C3A00A774E1 /* ArticleTableViewController.swift in Sources */,
 				82A8DA611C1828AA00799225 /* PageContentHolderViewController.swift in Sources */,

@@ -344,32 +344,32 @@
                                     <outlet property="articleLabel" destination="BUb-rO-6tL" id="myw-S3-c49"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CollectionCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="CollectionCell" rowHeight="422" id="2Pn-3r-hfo" customClass="TableViewCell" customModule="Fews" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="518" width="600" height="422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CollectionCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="MapCollectionCell" rowHeight="208" id="2Pn-3r-hfo" customClass="TableViewCell" customModule="Fews" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="518" width="600" height="208"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Pn-3r-hfo" id="sV2-LQ-Qhn">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="421.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="207.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kp2-Ih-364">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="421.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="208"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Rti-qN-sRS">
-                                                <size key="itemSize" width="355" height="204"/>
+                                                <size key="itemSize" width="356" height="204"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                 <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="MapCell" id="jH4-N6-Q5K" customClass="MapCollectionViewCell" customModule="Fews" customModuleProvider="target">
-                                                    <rect key="frame" x="122.5" y="0.0" width="355" height="204"/>
+                                                    <rect key="frame" x="122" y="0.0" width="356" height="204"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                        <rect key="frame" x="0.0" y="0.0" width="355" height="204"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="356" height="204"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="43k-SF-ij3">
-                                                                <rect key="frame" x="0.0" y="0.0" width="355" height="204"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="356" height="204"/>
                                                             </mapView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -385,33 +385,68 @@
                                                         <outlet property="mapView" destination="43k-SF-ij3" id="sbW-4s-O0V"/>
                                                     </connections>
                                                 </collectionViewCell>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="WikiCell" id="ss5-9I-o1T" customClass="WikiCollectionViewCell" customModule="Fews" customModuleProvider="target">
-                                                    <rect key="frame" x="123" y="214" width="355" height="204"/>
+                                            </cells>
+                                            <connections>
+                                                <outlet property="dataSource" destination="2Pn-3r-hfo" id="GCG-wo-hBO"/>
+                                                <outlet property="delegate" destination="2Pn-3r-hfo" id="rxp-cL-8xX"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="kp2-Ih-364" firstAttribute="leading" secondItem="sV2-LQ-Qhn" secondAttribute="leading" id="EcO-wn-rRY"/>
+                                        <constraint firstItem="kp2-Ih-364" firstAttribute="centerY" secondItem="sV2-LQ-Qhn" secondAttribute="centerY" id="SLB-Lm-QCx"/>
+                                        <constraint firstItem="kp2-Ih-364" firstAttribute="top" secondItem="sV2-LQ-Qhn" secondAttribute="top" id="mbm-Zs-dFb"/>
+                                        <constraint firstAttribute="trailing" secondItem="kp2-Ih-364" secondAttribute="trailing" id="vpl-Cf-oqq"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="collectionView" destination="kp2-Ih-364" id="EcG-jo-NJP"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="WikiCollectionCell" rowHeight="212" id="lcv-aO-DqQ" customClass="WikiCollectionView" customModule="Fews" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="726" width="600" height="212"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lcv-aO-DqQ" id="KB6-mD-YQu">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="211.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bBD-WS-1z8">
+                                            <rect key="frame" x="8" y="0.0" width="592" height="208.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="63E-Ns-Ujj">
+                                                <size key="itemSize" width="322" height="199.5"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="WikiCell" id="RnM-C5-mbm" customClass="WikiCollectionViewCell" customModule="Fews" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="4.5" width="322" height="199.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                        <rect key="frame" x="0.0" y="0.0" width="355" height="204"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="322" height="199.5"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wiki Cell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlV-sw-58i">
-                                                                <rect key="frame" x="8" y="8" width="339" height="21"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wiki Cell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aQ-O9-Y0R">
+                                                                <rect key="frame" x="8" y="8" width="306" height="21"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="21" id="kww-ar-0pv"/>
+                                                                    <constraint firstAttribute="height" constant="21" id="HtZ-mR-e4w"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDp-b9-h6n">
-                                                                <rect key="frame" x="8" y="43" width="339" height="128"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6O1-cI-k2k">
+                                                                <rect key="frame" x="8" y="43" width="306" height="128"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WikipediA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcq-XM-Vy2">
-                                                                <rect key="frame" x="270" y="175" width="77" height="21"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WikipediA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hb-r9-O5O">
+                                                                <rect key="frame" x="237" y="175" width="77" height="21"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="77" id="DDS-oj-SXZ"/>
-                                                                    <constraint firstAttribute="height" constant="21" id="Tyr-fa-ecd"/>
+                                                                    <constraint firstAttribute="width" constant="77" id="5t6-qK-UL9"/>
+                                                                    <constraint firstAttribute="height" constant="21" id="Ldd-TN-ynO"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
                                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -423,33 +458,32 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <rect key="contentStretch" x="0.0" y="0.25" width="1" height="1"/>
                                                     <constraints>
-                                                        <constraint firstItem="xcq-XM-Vy2" firstAttribute="bottom" secondItem="ss5-9I-o1T" secondAttribute="bottomMargin" id="WVN-dZ-mdY"/>
-                                                        <constraint firstItem="ZlV-sw-58i" firstAttribute="trailing" secondItem="ss5-9I-o1T" secondAttribute="trailingMargin" id="ZSZ-cN-9Gg"/>
-                                                        <constraint firstItem="xcq-XM-Vy2" firstAttribute="trailing" secondItem="zDp-b9-h6n" secondAttribute="trailing" id="bdD-tc-V97"/>
-                                                        <constraint firstItem="ZlV-sw-58i" firstAttribute="leading" secondItem="ss5-9I-o1T" secondAttribute="leadingMargin" id="dc2-G9-iyn"/>
-                                                        <constraint firstItem="ZlV-sw-58i" firstAttribute="top" secondItem="ss5-9I-o1T" secondAttribute="topMargin" id="f6F-Rs-5cz"/>
-                                                        <constraint firstItem="ZlV-sw-58i" firstAttribute="leading" secondItem="zDp-b9-h6n" secondAttribute="leading" id="hWh-h7-VKw"/>
-                                                        <constraint firstItem="zDp-b9-h6n" firstAttribute="top" secondItem="ZlV-sw-58i" secondAttribute="bottom" constant="14" id="qWD-Yl-N96"/>
-                                                        <constraint firstItem="xcq-XM-Vy2" firstAttribute="top" secondItem="zDp-b9-h6n" secondAttribute="bottom" constant="4" id="s8J-P7-fng"/>
-                                                        <constraint firstItem="ZlV-sw-58i" firstAttribute="trailing" secondItem="zDp-b9-h6n" secondAttribute="trailing" id="tpm-SY-w7h"/>
+                                                        <constraint firstItem="1aQ-O9-Y0R" firstAttribute="top" secondItem="RnM-C5-mbm" secondAttribute="topMargin" id="2l4-R2-uat"/>
+                                                        <constraint firstItem="8Hb-r9-O5O" firstAttribute="top" secondItem="6O1-cI-k2k" secondAttribute="bottom" constant="4" id="AHq-kW-IGo"/>
+                                                        <constraint firstItem="1aQ-O9-Y0R" firstAttribute="leading" secondItem="RnM-C5-mbm" secondAttribute="leadingMargin" id="ALJ-Ax-Bve"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="8Hb-r9-O5O" secondAttribute="bottom" constant="-4" id="D4O-hC-pXK"/>
+                                                        <constraint firstItem="1aQ-O9-Y0R" firstAttribute="trailing" secondItem="6O1-cI-k2k" secondAttribute="trailing" id="O8q-Mb-KJC"/>
+                                                        <constraint firstItem="6O1-cI-k2k" firstAttribute="top" secondItem="1aQ-O9-Y0R" secondAttribute="bottom" constant="14" id="PeV-tg-vaA"/>
+                                                        <constraint firstItem="6O1-cI-k2k" firstAttribute="trailing" secondItem="8Hb-r9-O5O" secondAttribute="trailing" id="U0b-JH-STX"/>
+                                                        <constraint firstItem="6O1-cI-k2k" firstAttribute="trailing" secondItem="RnM-C5-mbm" secondAttribute="trailingMargin" id="e6w-eC-d5U"/>
+                                                        <constraint firstItem="1aQ-O9-Y0R" firstAttribute="leading" secondItem="6O1-cI-k2k" secondAttribute="leading" id="nVa-c7-Ctw"/>
                                                     </constraints>
                                                     <connections>
-                                                        <outlet property="textLabel" destination="zDp-b9-h6n" id="FOw-2o-dcl"/>
-                                                        <outlet property="titleLabel" destination="ZlV-sw-58i" id="xf0-dM-Udi"/>
+                                                        <outlet property="textLabel" destination="6O1-cI-k2k" id="xI1-Ci-iVc"/>
+                                                        <outlet property="titleLabel" destination="1aQ-O9-Y0R" id="r1f-i2-1lQ"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
+                                            <connections>
+                                                <outlet property="dataSource" destination="lcv-aO-DqQ" id="ALn-AC-d8O"/>
+                                                <outlet property="delegate" destination="lcv-aO-DqQ" id="Tpr-eG-evh"/>
+                                            </connections>
                                         </collectionView>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="kp2-Ih-364" secondAttribute="trailing" id="AIP-ff-Tb1"/>
-                                        <constraint firstItem="kp2-Ih-364" firstAttribute="centerY" secondItem="sV2-LQ-Qhn" secondAttribute="centerY" id="hxU-iB-dNk"/>
-                                        <constraint firstItem="kp2-Ih-364" firstAttribute="top" secondItem="sV2-LQ-Qhn" secondAttribute="top" id="w2Z-Z4-gwE"/>
-                                        <constraint firstItem="kp2-Ih-364" firstAttribute="leading" secondItem="sV2-LQ-Qhn" secondAttribute="leading" id="zdU-AT-pOL"/>
-                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="collectionView" destination="kp2-Ih-364" id="EcG-jo-NJP"/>
+                                    <outlet property="wikiCollectionView" destination="bBD-WS-1z8" id="its-ns-4g9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -481,7 +515,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2760" y="1027"/>
+            <point key="canvasLocation" x="2760" y="1026"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MV1-rT-w7P">

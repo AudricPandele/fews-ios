@@ -1,29 +1,39 @@
+//
+//  TableViewCell.swift
+//  Fews
+//
+//  Created by Audric Pandelé on 27/01/2016.
+//  Copyright © 2016 Audric Pandelé. All rights reserved.
+//
+
 import UIKit
 
 class TableViewCell: UITableViewCell {
+    var event: Event!
 
-    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
 
 }
 
-extension TableViewCell {
+extension TableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
 
-    func setCollectionViewDataSourceDelegate<D: protocol<UICollectionViewDataSource, UICollectionViewDelegate>>(dataSourceDelegate: D, forRow row: Int) {
-
-        collectionView.delegate = dataSourceDelegate
-        collectionView.dataSource = dataSourceDelegate
-        collectionView.tag = row
-        collectionView.setContentOffset(collectionView.contentOffset, animated:false) // Stops collection view if it was scrolling.
-        collectionView.reloadData()
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
     }
 
-    var collectionViewOffset: CGFloat {
-        set {
-            collectionView.contentOffset.x = newValue
-        }
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
 
-        get {
-            return collectionView.contentOffset.x
-        }
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("MapCell", forIndexPath: indexPath)
+        (cell as! MapCollectionViewCell).layer.borderColor = UIColor.FewsGreyBorderColor().CGColor
+        (cell as! MapCollectionViewCell).layer.borderWidth = 1
+        (cell as! MapCollectionViewCell).layer.cornerRadius = 5
+        (cell as! MapCollectionViewCell).location = self.event.location
+        
+        return cell
+    }
+
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        print("Collection view at row \(collectionView.tag) selected index path \(indexPath.row)")
     }
 }
+

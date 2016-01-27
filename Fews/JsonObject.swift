@@ -106,7 +106,7 @@ class JsonObject: NSObject {
             }
         }
         
-        if let peoples = event["peoples"].array {
+        if let peoples = event["people"].array {
             for people in peoples {
                 if (people["source_name"] == "wikipedia"){
                     let wikipedia: WikipediaObject = WikipediaObject(name: people["name"].string!, source_url: people["source_url"].string!, text: people["text"].string!, photo: default_photo, twitter: default_twitter)

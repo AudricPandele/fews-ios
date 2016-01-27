@@ -10,7 +10,7 @@ import UIKit
 import Haneke
 
 class ArticleTableViewController: UITableViewController {
-
+    
     var imageArticle: UIImage!
     var titleArticle: String!
     var textArticle: String!
@@ -21,7 +21,7 @@ class ArticleTableViewController: UITableViewController {
         tableView.contentOffset.y = 0.0
         UIApplication.sharedApplication().statusBarHidden = true;
     }
-
+    
     override func viewDidAppear(animated: Bool) {
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
     }
@@ -32,13 +32,15 @@ class ArticleTableViewController: UITableViewController {
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 5
+        return 6
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
+    
+    // Comportement de chaque cellule du TableView
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
@@ -54,8 +56,10 @@ class ArticleTableViewController: UITableViewController {
         case 3:
             cellIdentifier = "TextCell2"
         case 4:
-            cellIdentifier = "CollectionCell"
-        
+            cellIdentifier = "MapCollectionCell"
+        case 5:
+            cellIdentifier = "WikiCollectionCell"
+            
         default: ()
         }
         
@@ -63,7 +67,6 @@ class ArticleTableViewController: UITableViewController {
         
         switch cellIdentifier {
         case "ImageCell":
-
             if let url = NSURL(string: self.event.top_image.original){
                 (cell as! ImageCell).imageViewArticle.hnk_setImageFromURL(url)
             }
@@ -71,7 +74,7 @@ class ArticleTableViewController: UITableViewController {
             
         case "TextCell":
             (cell as! TextCell).articleLabel.text = self.event.text[0]
-
+            
         case "CitationCell":
             (cell as! CitationCell).CitationLabel.text = "\(self.event.quote)"
             (cell as! CitationCell).CitationLabel.font = UIFont(name: "HelveticaNeue-Italic", size: CGFloat(23))
@@ -80,17 +83,20 @@ class ArticleTableViewController: UITableViewController {
         case "TextCell2":
             (cell as! TextCell).articleLabel.text = self.event.text[1]
             
-        case "CollectionCell":
-            (cell as! TableViewCell).setCollectionViewDataSourceDelegate(self, forRow: indexPath.row)
-            (cell as! TableViewCell).collectionViewOffset = storedOffsets[indexPath.row] ?? 0
+        case "MapCollectionCell":
+            (cell as! TableViewCell).event = self.event
             
-
+        case "WikiCollectionCell":
+            (cell as! WikiCollectionView).wikipedias = self.event.wikipedias
+            
+            
         default: ()
         }
         
         return cell
     }
     
+    // Taille de chaque cellule du TableView
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
@@ -102,34 +108,16 @@ class ArticleTableViewController: UITableViewController {
         case 3:
             return 200
         case 4:
-            return 430
+            return 215
+        case 5:
+            return 215
         default: ()
         return 200
         }
     }
     
-    @IBAction func close(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: {});
-    }
     
-    func sharing(){
-        if let myWebsite = NSURL(string: "url_of_event")
-        {
-            let objectsToShare = [event.shareEvent(), myWebsite]
-            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-            
-            //New Excluded Activities Code
-            activityVC.excludedActivityTypes = [UIActivityTypeAirDrop, UIActivityTypeAddToReadingList]
-            //
-            
-            self.presentViewController(activityVC, animated: true, completion: nil)
-        }
-    }
-    
-    @IBAction func share(sender: AnyObject) {
-        sharing()
-    }
-    
+    // Fermer en scollant vers le bas
     override func scrollViewDidScroll(scrollView: UIScrollView) {
         
         if let imageCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as? ImageCell {
@@ -159,61 +147,41 @@ class ArticleTableViewController: UITableViewController {
             self.navigationController?.navigationBar.translucent = true
             self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
             self.title = self.event.dateToString(false).uppercaseString
-
+            
         } else {
-                self.navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
-                self.navigationController?.navigationBar.translucent = true
+            self.navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
+            self.navigationController?.navigationBar.translucent = true
             self.title = ""
-            }
+        }
         
         if scrollView.contentOffset.y <= -140 {
             self.dismissViewControllerAnimated(true, completion: {});
-
+            
         }
-    }
-}
-
-extension ArticleTableViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        
-        var cellIdentifier = ""
-        switch indexPath.row {
-        case 0:
-            cellIdentifier = "MapCell"
-        case 1:
-            cellIdentifier = "WikiCell"
-            
-        default: ()
-        }
-        
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath)
-        
-        switch cellIdentifier {
-        case "MapCell":
-            (cell as! MapCollectionViewCell).layer.borderColor = UIColor.FewsGreyBorderColor().CGColor
-            (cell as! MapCollectionViewCell).layer.borderWidth = 1
-            (cell as! MapCollectionViewCell).layer.cornerRadius = 5
-            (cell as! MapCollectionViewCell).location = self.event.location
-            
-        case "WikiCell":
-            (cell as! WikiCollectionViewCell).layer.borderColor = UIColor.FewsGreyBorderColor().CGColor
-            (cell as! WikiCollectionViewCell).layer.borderWidth = 1
-            (cell as! WikiCollectionViewCell).layer.cornerRadius = 5
-            (cell as! WikiCollectionViewCell).titleLabel.text = event.wikipedias[0].name
-            (cell as! WikiCollectionViewCell).textLabel.text = event.wikipedias[0].text
-
-        default: ()
-        }
-        
-        return cell
+    
+    // Fonctions custom
+    @IBAction func close(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: {});
     }
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        print("Collection view at row \(collectionView.tag) selected index path \(indexPath.row)")
+    func sharing(){
+        if let myWebsite = NSURL(string: "url_of_event")
+        {
+            let objectsToShare = [event.shareEvent(), myWebsite]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            
+            //New Excluded Activities Code
+            activityVC.excludedActivityTypes = [UIActivityTypeAirDrop, UIActivityTypeAddToReadingList]
+            //
+            
+            self.presentViewController(activityVC, animated: true, completion: nil)
+        }
     }
+    
+    @IBAction func share(sender: AnyObject) {
+        sharing()
+    }
+    
 }
