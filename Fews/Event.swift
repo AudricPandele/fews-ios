@@ -21,8 +21,9 @@ class Event: NSObject {
     var location: String!
     var quote: String!
     var wikipedias: [WikipediaObject]!
+    var tweets: [TweetObject]!
     
-    init(id: String, articles: [Article], top_image: TopImage, images: [String], text: [String], quote: String, location: String, wikipedias: [WikipediaObject]){
+    init(id: String, articles: [Article], top_image: TopImage, images: [String], text: [String], quote: String, location: String, wikipedias: [WikipediaObject], tweets: [TweetObject]){
         
         self.id = id
         self.date = id.toDate(DateFormat.Custom("yyyyMMddHHmmss"))!
@@ -33,6 +34,7 @@ class Event: NSObject {
         self.location = location
         self.quote = quote
         self.wikipedias = wikipedias
+        self.tweets = tweets
     }
     
     func findArticle(index: Int) -> NSObject {

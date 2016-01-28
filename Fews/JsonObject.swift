@@ -24,7 +24,9 @@ class JsonObject: NSObject {
     
     func JsonToEventsList(eventList: EventsList) -> EventsList {
         if let events = self.readableJSON.array {
+            NSLog("\(events)")
             for event in events {
+                NSLog("\(event)")
                 let e = JsonToEvent(event)
                 eventList.add(e)
             }
@@ -40,8 +42,9 @@ class JsonObject: NSObject {
         let quote: String = JsonQuote(event)
         let location: String = JsonLocation(event)
         let wikipedias: [WikipediaObject] = JsonToWikipediaProduct(event)
+        let tweets: [TweetObject] = JsonToTweets(event)
         
-        let event: Event = Event(id: event["_id"].string!, articles: articles, top_image: topImage, images: imagesList, text: textList, quote: quote, location: location, wikipedias: wikipedias)
+        let event: Event = Event(id: event["_id"].string!, articles: articles, top_image: topImage, images: imagesList, text: textList, quote: quote, location: location, wikipedias: wikipedias, tweets: tweets)
         return event
     }
 
@@ -49,7 +52,7 @@ class JsonObject: NSObject {
         var articles: [Article] = []
         if let articleArray = event["articles"].array {
             for a in articleArray {
-                let article: Article = Article(name: a["name"].string!, origin: a["origin"].string!, title: a["title"].string!, link: a["link"].string!, logo: a["logo"].string!)
+                let article: Article = Article(name: a["origin"]["name"].string!, title: a["title"].string!, link: a["link"].string!, logo: "https://fews.io/static/img/websites/\(a["origin"]["name"].string!).jpg")
                 articles.append(article)
             }
         }
@@ -58,12 +61,31 @@ class JsonObject: NSObject {
     
     func JsonToText(event: JSON) -> [String] {
         var textList: [String] = []
-        if let textArray = event["text"].array {
-            for text in textArray {
-                textList.append(text.string!)
+        if let textArray = event["summary"].array {
+            let tabSize = textArray.count
+            let half = tabSize/2
+            
+            var sentences: [String] = []
+            for t in textArray {
+                sentences.append(t.string!)
             }
+            
+            let summary1 = sentences[0..<half]
+            let summary2 = sentences[half..<tabSize]
+            
+            textList[0] = ArrayToString(summary1)
+            textList[1] = ArrayToString(summary2)
         }
+        NSLog("\(textList)")
         return textList
+    }
+    
+    func ArrayToString(myArray: ArraySlice<String>) -> String{
+        var summary: String = ""
+        for mystring in myArray {
+            summary = "\(summary) \(mystring)"
+        }
+        return summary
     }
     
     func JsonToTopImage(event: JSON) -> TopImage {
@@ -78,6 +100,20 @@ class JsonObject: NSObject {
             }
         }
         return imagesList
+    }
+    
+    func JsonToTweets(event: JSON) -> [TweetObject]{
+        var tweetsTab: [TweetObject] = []
+        
+        if let tweets = event["tweets"].array {
+            for tweet in tweets {
+                let new_tweet: TweetObject = TweetObject(text: tweet["text"].string!, user_name: tweet["username"].string!)
+                
+                tweetsTab.append(new_tweet)
+            }
+        }
+        return tweetsTab
+
     }
     
     func JsonToWikipediaProduct(event: JSON) -> [WikipediaObject]{

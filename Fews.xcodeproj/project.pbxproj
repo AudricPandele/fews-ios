@@ -14,6 +14,10 @@
 		82680D331C2020190056EC7E /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82680D321C2020190056EC7E /* ImageCell.swift */; };
 		828383F11C201C3A00A774E1 /* ArticleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828383F01C201C3A00A774E1 /* ArticleTableViewController.swift */; };
 		829D5CF01C592D24008EC4B5 /* WikiCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829D5CEF1C592D24008EC4B5 /* WikiCollectionView.swift */; };
+		829D5CF21C5A517C008EC4B5 /* TweetObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829D5CF11C5A517C008EC4B5 /* TweetObject.swift */; };
+		829D5CF41C5A536A008EC4B5 /* TweetCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829D5CF31C5A536A008EC4B5 /* TweetCollectionView.swift */; };
+		829D5CF61C5A53DB008EC4B5 /* TweetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829D5CF51C5A53DB008EC4B5 /* TweetCollectionViewCell.swift */; };
+		829D5CF81C5A69E1008EC4B5 /* events2.json in Resources */ = {isa = PBXBuildFile; fileRef = 829D5CF71C5A69E1008EC4B5 /* events2.json */; };
 		829D7DD41C202ED2009F21C5 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829D7DD31C202ED2009F21C5 /* TextCell.swift */; };
 		82A8DA4D1C18247B00799225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8DA4C1C18247B00799225 /* AppDelegate.swift */; };
 		82A8DA4F1C18247B00799225 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A8DA4E1C18247B00799225 /* ViewController.swift */; };
@@ -48,6 +52,10 @@
 		82680D321C2020190056EC7E /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		828383F01C201C3A00A774E1 /* ArticleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewController.swift; sourceTree = "<group>"; };
 		829D5CEF1C592D24008EC4B5 /* WikiCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikiCollectionView.swift; sourceTree = "<group>"; };
+		829D5CF11C5A517C008EC4B5 /* TweetObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetObject.swift; sourceTree = "<group>"; };
+		829D5CF31C5A536A008EC4B5 /* TweetCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCollectionView.swift; sourceTree = "<group>"; };
+		829D5CF51C5A53DB008EC4B5 /* TweetCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCollectionViewCell.swift; sourceTree = "<group>"; };
+		829D5CF71C5A69E1008EC4B5 /* events2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = events2.json; sourceTree = "<group>"; };
 		829D7DD31C202ED2009F21C5 /* TextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		82A8DA491C18247B00799225 /* Fews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82A8DA4C1C18247B00799225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,8 +125,10 @@
 				823872D41C4F8B50000BB097 /* WikiCollectionViewCell.swift */,
 				823872D21C4F8A15000BB097 /* MapCollectionViewCell.swift */,
 				823872D01C4F80D8000BB097 /* TableViewCell.swift */,
+				829D5CF51C5A53DB008EC4B5 /* TweetCollectionViewCell.swift */,
 				82680D321C2020190056EC7E /* ImageCell.swift */,
 				829D5CEF1C592D24008EC4B5 /* WikiCollectionView.swift */,
+				829D5CF31C5A536A008EC4B5 /* TweetCollectionView.swift */,
 				829D7DD31C202ED2009F21C5 /* TextCell.swift */,
 				82B6C8FD1C3D076200C9A42A /* CitationCell.swift */,
 			);
@@ -129,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				EBDD9B681C20CF2B00434A40 /* events.json */,
+				829D5CF71C5A69E1008EC4B5 /* events2.json */,
 			);
 			name = Json;
 			sourceTree = "<group>";
@@ -185,6 +196,7 @@
 				EB3C5F481C1C782C004C7C13 /* JsonObject.swift */,
 				823872D61C4FC787000BB097 /* WikipediaObject.swift */,
 				EBDD9B661C20C25D00434A40 /* Event.swift */,
+				829D5CF11C5A517C008EC4B5 /* TweetObject.swift */,
 				EB78FD111C2227980067F826 /* Entity.swift */,
 				EBDD9B701C20E2C600434A40 /* TopImage.swift */,
 				EBDD9B6C1C20D1E300434A40 /* EventsList.swift */,
@@ -264,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82A8DA571C18247B00799225 /* LaunchScreen.storyboard in Resources */,
+				829D5CF81C5A69E1008EC4B5 /* events2.json in Resources */,
 				82A8DA541C18247B00799225 /* Assets.xcassets in Resources */,
 				82A8DA651C18309E00799225 /* Podfile in Resources */,
 				EBDD9B691C20CF2B00434A40 /* events.json in Resources */,
@@ -330,9 +343,11 @@
 				EBDD9B6D1C20D1E300434A40 /* EventsList.swift in Sources */,
 				823872D11C4F80D8000BB097 /* TableViewCell.swift in Sources */,
 				EB67A9B81C260A3A006D0A85 /* UIColor.swift in Sources */,
+				829D5CF21C5A517C008EC4B5 /* TweetObject.swift in Sources */,
 				823872D31C4F8A15000BB097 /* MapCollectionViewCell.swift in Sources */,
 				EBDD9B671C20C25D00434A40 /* Event.swift in Sources */,
 				823872D51C4F8B50000BB097 /* WikiCollectionViewCell.swift in Sources */,
+				829D5CF61C5A53DB008EC4B5 /* TweetCollectionViewCell.swift in Sources */,
 				82A8DA4F1C18247B00799225 /* ViewController.swift in Sources */,
 				829D5CF01C592D24008EC4B5 /* WikiCollectionView.swift in Sources */,
 				EBDD9B6B1C20CFAC00434A40 /* Article.swift in Sources */,
@@ -342,6 +357,7 @@
 				EB3C5F491C1C782C004C7C13 /* JsonObject.swift in Sources */,
 				829D7DD41C202ED2009F21C5 /* TextCell.swift in Sources */,
 				EB78FD121C2227980067F826 /* Entity.swift in Sources */,
+				829D5CF41C5A536A008EC4B5 /* TweetCollectionView.swift in Sources */,
 				82680D331C2020190056EC7E /* ImageCell.swift in Sources */,
 				82A8DA4D1C18247B00799225 /* AppDelegate.swift in Sources */,
 				82B6C8FE1C3D076200C9A42A /* CitationCell.swift in Sources */,

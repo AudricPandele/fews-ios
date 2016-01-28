@@ -19,7 +19,6 @@ class ArticleTableViewController: UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         tableView.contentOffset.y = 0.0
-        UIApplication.sharedApplication().statusBarHidden = true;
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -32,7 +31,7 @@ class ArticleTableViewController: UITableViewController {
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 6
+        return 7
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,6 +58,8 @@ class ArticleTableViewController: UITableViewController {
             cellIdentifier = "MapCollectionCell"
         case 5:
             cellIdentifier = "WikiCollectionCell"
+        case 6:
+            cellIdentifier = "TweetCollectionCell"
             
         default: ()
         }
@@ -88,8 +89,10 @@ class ArticleTableViewController: UITableViewController {
             
         case "WikiCollectionCell":
             (cell as! WikiCollectionView).wikipedias = self.event.wikipedias
-            
-            
+
+        case "TweetCollectionCell":
+            (cell as! TweetCollectionView).tweets = self.event.tweets
+
         default: ()
         }
         
@@ -110,6 +113,8 @@ class ArticleTableViewController: UITableViewController {
         case 4:
             return 215
         case 5:
+            return 215
+        case 6:
             return 215
         default: ()
         return 200

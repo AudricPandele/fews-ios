@@ -17,14 +17,13 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
 //    let imagesArray: NSMutableArray! = []
 
     var pageViewController: UIPageViewController!
-    var JsonEntity: JsonObject = JsonObject(path: NSBundle.mainBundle().pathForResource("events", ofType: "json") as String!)
+    var JsonEntity: JsonObject = JsonObject(path: NSBundle.mainBundle().pathForResource("events2", ofType: "json") as String!)
     var eventsList: EventsList = EventsList()
     
     @IBOutlet weak var loading: UILabel!
     var overlay : UIView?
     
     override func viewWillAppear(animated: Bool) {
-        UIApplication.sharedApplication().statusBarHidden=true;
         pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController
         
         for view in self.pageViewController.view.subviews {
@@ -46,6 +45,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
         }
         
         eventsList = self.JsonEntity.JsonToEventsList(eventsList)
+        NSLog("loll")
         eventsList.shuffle()
 
         self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController
@@ -75,6 +75,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
     {
         let pageContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageContentHolderViewController") as! PageContentHolderViewController
 
+        NSLog("\(eventsList.events)")
         pageContentViewController.event = eventsList.find(index) 
         pageContentViewController.pageIndex = index
         

@@ -11,14 +11,12 @@ import UIKit
 class Article: NSObject {
 
     var name: String!
-    var origin: String!
     var title: String!
     var link: String!
     var logo: String!
     
-    init(name: String, origin: String, title: String, link: String, logo: String){
+    init(name: String, title: String, link: String, logo: String){
         self.name = name
-        self.origin = origin
         self.title = title
         self.link = link
         self.logo = logo
