@@ -24,9 +24,7 @@ class JsonObject: NSObject {
     
     func JsonToEventsList(eventList: EventsList) -> EventsList {
         if let events = self.readableJSON.array {
-            NSLog("\(events)")
             for event in events {
-                NSLog("\(event)")
                 let e = JsonToEvent(event)
                 eventList.add(e)
             }
@@ -73,8 +71,8 @@ class JsonObject: NSObject {
             let summary1 = sentences[0..<half]
             let summary2 = sentences[half..<tabSize]
             
-            textList[0] = ArrayToString(summary1)
-            textList[1] = ArrayToString(summary2)
+            textList.append(ArrayToString(summary1))
+            textList.append(ArrayToString(summary2))
         }
         NSLog("\(textList)")
         return textList

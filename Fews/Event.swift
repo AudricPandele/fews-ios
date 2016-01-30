@@ -26,7 +26,7 @@ class Event: NSObject {
     init(id: String, articles: [Article], top_image: TopImage, images: [String], text: [String], quote: String, location: String, wikipedias: [WikipediaObject], tweets: [TweetObject]){
         
         self.id = id
-        self.date = id.toDate(DateFormat.Custom("yyyyMMddHHmmss"))!
+        self.date = NSDate(timeIntervalSince1970: Double(id)!)
         self.articles = articles
         self.top_image = top_image
         self.images = images
