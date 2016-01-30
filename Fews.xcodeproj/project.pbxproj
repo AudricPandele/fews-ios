@@ -11,6 +11,13 @@
 		823872D31C4F8A15000BB097 /* MapCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823872D21C4F8A15000BB097 /* MapCollectionViewCell.swift */; };
 		823872D51C4F8B50000BB097 /* WikiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823872D41C4F8B50000BB097 /* WikiCollectionViewCell.swift */; };
 		823872D71C4FC787000BB097 /* WikipediaObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823872D61C4FC787000BB097 /* WikipediaObject.swift */; };
+		82480E4D1C5D5E0600CC19E7 /* DaysTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82480E4C1C5D5E0600CC19E7 /* DaysTableViewCell.swift */; };
+		82480E4F1C5D670000CC19E7 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82480E4E1C5D670000CC19E7 /* TableViewController.swift */; };
+		82480E511C5D6FA000CC19E7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82480E501C5D6FA000CC19E7 /* MenuViewController.swift */; };
+		82480E5D1C5D707000CC19E7 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 82480E551C5D707000CC19E7 /* MMDrawerBarButtonItem.m */; };
+		82480E5E1C5D707000CC19E7 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82480E571C5D707000CC19E7 /* MMDrawerController.m */; };
+		82480E5F1C5D707000CC19E7 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 82480E5A1C5D707000CC19E7 /* MMDrawerVisualState.m */; };
+		82480E601C5D707000CC19E7 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82480E5C1C5D707000CC19E7 /* UIViewController+MMDrawerController.m */; };
 		82680D331C2020190056EC7E /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82680D321C2020190056EC7E /* ImageCell.swift */; };
 		828383F11C201C3A00A774E1 /* ArticleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828383F01C201C3A00A774E1 /* ArticleTableViewController.swift */; };
 		829D5CF01C592D24008EC4B5 /* WikiCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829D5CEF1C592D24008EC4B5 /* WikiCollectionView.swift */; };
@@ -49,6 +56,19 @@
 		823872D21C4F8A15000BB097 /* MapCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCollectionViewCell.swift; sourceTree = "<group>"; };
 		823872D41C4F8B50000BB097 /* WikiCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikiCollectionViewCell.swift; sourceTree = "<group>"; };
 		823872D61C4FC787000BB097 /* WikipediaObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikipediaObject.swift; sourceTree = "<group>"; };
+		82480E4C1C5D5E0600CC19E7 /* DaysTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysTableViewCell.swift; sourceTree = "<group>"; };
+		82480E4E1C5D670000CC19E7 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		82480E501C5D6FA000CC19E7 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		82480E531C5D707000CC19E7 /* Fews-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fews-Bridging-Header.h"; sourceTree = "<group>"; };
+		82480E541C5D707000CC19E7 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		82480E551C5D707000CC19E7 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		82480E561C5D707000CC19E7 /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
+		82480E571C5D707000CC19E7 /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
+		82480E581C5D707000CC19E7 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		82480E591C5D707000CC19E7 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
+		82480E5A1C5D707000CC19E7 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
+		82480E5B1C5D707000CC19E7 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		82480E5C1C5D707000CC19E7 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
 		82680D321C2020190056EC7E /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		828383F01C201C3A00A774E1 /* ArticleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewController.swift; sourceTree = "<group>"; };
 		829D5CEF1C592D24008EC4B5 /* WikiCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikiCollectionView.swift; sourceTree = "<group>"; };
@@ -155,6 +175,23 @@
 			name = controllers;
 			sourceTree = "<group>";
 		};
+		82480E521C5D705900CC19E7 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				82480E541C5D707000CC19E7 /* MMDrawerBarButtonItem.h */,
+				82480E551C5D707000CC19E7 /* MMDrawerBarButtonItem.m */,
+				82480E561C5D707000CC19E7 /* MMDrawerController.h */,
+				82480E571C5D707000CC19E7 /* MMDrawerController.m */,
+				82480E581C5D707000CC19E7 /* MMDrawerController+Subclass.h */,
+				82480E591C5D707000CC19E7 /* MMDrawerVisualState.h */,
+				82480E5A1C5D707000CC19E7 /* MMDrawerVisualState.m */,
+				82480E5B1C5D707000CC19E7 /* UIViewController+MMDrawerController.h */,
+				82480E5C1C5D707000CC19E7 /* UIViewController+MMDrawerController.m */,
+				82480E531C5D707000CC19E7 /* Fews-Bridging-Header.h */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
 		82A8DA401C18247B00799225 = {
 			isa = PBXGroup;
 			children = (
@@ -177,11 +214,15 @@
 		82A8DA4B1C18247B00799225 /* Fews */ = {
 			isa = PBXGroup;
 			children = (
+				82480E521C5D705900CC19E7 /* Menu */,
 				EB67A9B61C2609CA006D0A85 /* extensions */,
 				8210316C1C20555200E46A5B /* Json */,
 				EB3C5F471C1C7778004C7C13 /* models */,
 				8210316F1C2058F500E46A5B /* controllers */,
 				82A8DA501C18247B00799225 /* Main.storyboard */,
+				82480E501C5D6FA000CC19E7 /* MenuViewController.swift */,
+				82480E4E1C5D670000CC19E7 /* TableViewController.swift */,
+				82480E4C1C5D5E0600CC19E7 /* DaysTableViewCell.swift */,
 				82A8DA4C1C18247B00799225 /* AppDelegate.swift */,
 				82A8DA531C18247B00799225 /* Assets.xcassets */,
 				82A8DA551C18247B00799225 /* LaunchScreen.storyboard */,
@@ -242,13 +283,13 @@
 		82A8DA411C18247B00799225 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Audric Pandelé";
 				TargetAttributes = {
 					82A8DA481C18247B00799225 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = T6RB53DB8F;
+						DevelopmentTeam = SF6BSG34CG;
 					};
 				};
 			};
@@ -347,19 +388,26 @@
 				823872D31C4F8A15000BB097 /* MapCollectionViewCell.swift in Sources */,
 				EBDD9B671C20C25D00434A40 /* Event.swift in Sources */,
 				823872D51C4F8B50000BB097 /* WikiCollectionViewCell.swift in Sources */,
+				82480E601C5D707000CC19E7 /* UIViewController+MMDrawerController.m in Sources */,
 				829D5CF61C5A53DB008EC4B5 /* TweetCollectionViewCell.swift in Sources */,
 				82A8DA4F1C18247B00799225 /* ViewController.swift in Sources */,
 				829D5CF01C592D24008EC4B5 /* WikiCollectionView.swift in Sources */,
+				82480E5D1C5D707000CC19E7 /* MMDrawerBarButtonItem.m in Sources */,
 				EBDD9B6B1C20CFAC00434A40 /* Article.swift in Sources */,
 				828383F11C201C3A00A774E1 /* ArticleTableViewController.swift in Sources */,
 				82A8DA611C1828AA00799225 /* PageContentHolderViewController.swift in Sources */,
 				EBDD9B711C20E2C600434A40 /* TopImage.swift in Sources */,
 				EB3C5F491C1C782C004C7C13 /* JsonObject.swift in Sources */,
+				82480E511C5D6FA000CC19E7 /* MenuViewController.swift in Sources */,
 				829D7DD41C202ED2009F21C5 /* TextCell.swift in Sources */,
 				EB78FD121C2227980067F826 /* Entity.swift in Sources */,
+				82480E5F1C5D707000CC19E7 /* MMDrawerVisualState.m in Sources */,
 				829D5CF41C5A536A008EC4B5 /* TweetCollectionView.swift in Sources */,
+				82480E4F1C5D670000CC19E7 /* TableViewController.swift in Sources */,
 				82680D331C2020190056EC7E /* ImageCell.swift in Sources */,
 				82A8DA4D1C18247B00799225 /* AppDelegate.swift in Sources */,
+				82480E4D1C5D5E0600CC19E7 /* DaysTableViewCell.swift in Sources */,
+				82480E5E1C5D707000CC19E7 /* MMDrawerController.m in Sources */,
 				82B6C8FE1C3D076200C9A42A /* CitationCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,6 +522,7 @@
 			baseConfigurationReference = 0DE6EA55EB562B8ABD249310 /* Pods-Fews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -482,9 +531,11 @@
 				);
 				INFOPLIST_FILE = Fews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = clement.Fews;
+				PRODUCT_BUNDLE_IDENTIFIER = audric.Fews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Fews/Fews-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -493,6 +544,7 @@
 			baseConfigurationReference = 6B439C6B6936200BF5DC0F75 /* Pods-Fews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -501,9 +553,10 @@
 				);
 				INFOPLIST_FILE = Fews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = clement.Fews;
+				PRODUCT_BUNDLE_IDENTIFIER = audric.Fews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Fews/Fews-Bridging-Header.h";
 			};
 			name = Release;
 		};

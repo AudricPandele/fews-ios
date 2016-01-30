@@ -24,6 +24,8 @@ class PageContentHolderViewController: UIViewController {
     var event: Event!
         
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true);
+        
         if let gest = self.view.gestureRecognizers{
             for gR: UIGestureRecognizer in gest {
                 gR.delegate = (self as! UIGestureRecognizerDelegate)
@@ -37,7 +39,6 @@ class PageContentHolderViewController: UIViewController {
         
         self.titleLabel.alpha = 0.0
         self.titleLabel.text = self.event.prepareArticleShortenTitle()
-        self.eventDate.text = self.event.dateToString()
         
         UIView.animateWithDuration(1.0, animations: {
             self.titleLabel.alpha = 1.0

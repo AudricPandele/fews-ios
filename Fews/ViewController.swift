@@ -24,6 +24,13 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
     var overlay : UIView?
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true);
+        UIApplication.sharedApplication().statusBarHidden=true;
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.translucent = true
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        
         pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController
         
         for view in self.pageViewController.view.subviews {

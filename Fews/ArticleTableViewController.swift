@@ -18,7 +18,9 @@ class ArticleTableViewController: UITableViewController {
     var storedOffsets = [Int: CGFloat]()
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true);
         tableView.contentOffset.y = 0.0
+        UIApplication.sharedApplication().statusBarHidden=true;
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -105,11 +107,11 @@ class ArticleTableViewController: UITableViewController {
         case 0:
             return 300
         case 1:
-            return 200
+            return 230
         case 2:
             return 120
         case 3:
-            return 200
+            return 230
         case 4:
             return 215
         case 5:

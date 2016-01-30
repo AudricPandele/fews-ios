@@ -12,10 +12,26 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var centerContainer: MMDrawerController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+        var rootViewController = self.window!.rootViewController
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let centerViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Home")
+        let leftViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LeftMenu")
+        
+        let leftSideNav = UINavigationController(rootViewController: leftViewController)
+        let centerNav = UINavigationController(rootViewController: centerViewController)
+        
+        centerContainer = MMDrawerController(centerViewController: centerNav, leftDrawerViewController: leftSideNav)
+        
+        centerContainer!.openDrawerGestureModeMask = MMOpenDrawerGestureMode.PanningCenterView
+        centerContainer!.closeDrawerGestureModeMask = MMCloseDrawerGestureMode.PanningCenterView
+        
+        window?.rootViewController = centerContainer
+        window?.makeKeyAndVisible()
         
         return true
     }
