@@ -1,0 +1,168 @@
+[{
+   "_id": "1454105271",
+   "_rev": "3-31e10db936bc4612ee6b2ac414585bc2",
+   "articles": [
+       {
+           "origin": {
+               "url": "http://thenextweb.com/feed/",
+               "name": "thenextweb"
+           },
+           "timestamp": 1454106818,
+           "top_image": {
+               "original": "http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2013/05/gun.jpg"
+           },
+           "link": "http://thenextweb.com/facebook/2016/01/30/report-facebook-to-ban-private-gun-sales/",
+           "title": "Facebook to ban private gun sales"
+       },
+       {
+           "origin": {
+               "url": "http://feeds.nytimes.com/nyt/rss/Technology",
+               "name": "nytimes"
+           },
+           "timestamp": 1454105271,
+           "top_image": {
+               "original": "http://static01.nyt.com/images/icons/t_logo_291_black.png"
+           },
+           "link": "http://www.nytimes.com/2016/01/30/technology/facebook-gun-sales-ban.html?partner=rss&emc=rss",
+           "title": "Facebook Moves to Ban Private Gun Sales on Its Site"
+       },
+       {
+           "origin": {
+               "url": "http://feeds.slashgear.com/slashgear",
+               "name": "slashgear"
+           },
+           "timestamp": 1454114726,
+           "top_image": {
+               "original": "http://www.slashgear.com/wp-content/uploads/2016/01/Facebook-822x420.jpg"
+           },
+           "link": "http://feeds.slashgear.com/~r/slashgear/~3/yUScim9yw54/",
+           "title": "Facebook cracks down on private gun sales"
+       },
+       {
+           "origin": {
+               "url": "http://rssfeeds.usatoday.com/usatoday-TechTopStories",
+               "name": "usatoday"
+           },
+           "timestamp": 1454133918,
+           "top_image": {
+               "original": "http://www.gannett-cdn.com/-mm-/219be59df7143130da6695a5d30cbbd05dbd8c3f/c=0-333-3456-2286&r=x1683&c=3200x1680/local/-/media/2016/01/30/USATODAY/USATODAY/635897160768228163-AFP-548316841-79207312.JPG"
+           },
+           "link": "http://rssfeeds.usatoday.com/~/135323393/0/usatoday-techtopstories~Facebook-bans-private-gun-sales/",
+           "title": "Facebook bans private gun sales"
+       },
+       {
+           "origin": {
+               "url": "http://www.cnet.com/rss/news",
+               "name": "cnet"
+           },
+           "timestamp": 1454112999,
+           "top_image": {
+               "original": "http://cnet2.cbsistatic.com/hub/i/r/2016/01/13/a81e6cd0-06a5-426f-ac2e-994982ee36f5/thumbnail/670x503/d718be665ecd81274dd6ec9cf0c9cb17/jonathan-pointing-server-room-reduced-1.jpg"
+           },
+           "link": "http://cnet.com.feedsportal.com/c/34938/f/645093/s/4d3c0296/sc/24/l/0L0Scnet0N0Cnews0Cfacebook0Etakes0Ea0Eshot0Eat0Egun0Esellers0C0Tftag0FCAD590Aa51e/story01.htm",
+           "title": "Facebook takes a shot at gun sellers"
+       },
+       {
+           "origin": {
+               "url": "http://time.com/tech/feed/",
+               "name": "time"
+           },
+           "timestamp": 1454108496,
+           "top_image": {
+               "original": "https://timedotcom.files.wordpress.com/2016/01/facebook-logo-003.jpg"
+           },
+           "link": "http://time.com/4200996/facebook-bans-gun-sales/",
+           "title": "Facebook Says It Will Ban Gun Sales Between Users"
+       },
+       {
+           "origin": {
+               "url": "http://www.huffingtonpost.com/feeds/verticals/technology/index.xml",
+               "name": "huffingtonpost"
+           },
+           "timestamp": 1454107785,
+           "top_image": {
+               "original": "http://img.huffingtonpost.com/asset/1200_630/56abefbe1f00007f00216fb8.jpeg"
+           },
+           "link": "http://feeds.huffingtonpost.com/c/35496/f/677097/s/4d3bdd18/sc/7/l/0L0Shuffingtonpost0N0C20A160C0A10C290Cfacebook0Eprivate0Egun0Esales0In0I911670A20Bhtml0Dutm0Ihp0Iref0Ftechnology0Gir0FTechnology/story01.htm",
+           "title": "Facebook To Block Private Gun Sales"
+       },
+       {
+           "origin": {
+               "url": "http://feeds.venturebeat.com/VentureBeat",
+               "name": "venturebeat"
+           },
+           "timestamp": 1454106959,
+           "top_image": {
+               "original": "http://1u88jj3r4db2x4txp44yqfj1.wpengine.netdna-cdn.com/wp-content/uploads/2015/07/16743258899_0cc2a49bcd_k-780x520.jpg"
+           },
+           "link": "http://venturebeat.com/2016/01/29/facebook-bans-person-to-person-gun-sales-on-its-site/",
+           "title": "Facebook bans person-to-person gun sales on its site"
+       }
+   ],
+   "common_words": [
+       "person",
+       "facebook",
+       "gun",
+       "sale"
+   ],
+   "summary": [
+       "But according to the New York Times, the company has finally taken steps to ban private person-to-person gun sales on both Facebook and Instagram.",
+       "\"Over the last two years, more and more people have been using Facebook to discover products and to buy and sell things to one another,\" Monika Bickert, Facebook's head of product policy, said in a statement.",
+       "Advertisement Continue reading the main story Facebook is banning private sales of guns on its flagship social network and on its Instagram photo-sharing service, the company said late Friday.",
+       "We are continuing to develop, test and launch new products to make this experience even better for people and are updating our regulated goods policies to reflect this evolution.",
+       "President Obama and state attorneys general have increased pressure on Facebook to tighten restrictions on firearms because of the proliferation of posts that offer guns for sale, often without background checks.",
+       "One of our reporters were able to purchase a semiautomatic rifle and ammunition in less than 15 minutes on the social network.",
+       "The ban, actually an update to a policy that already prohibits the sale of marijuana, pharmaceuticals, and illegal drugs, does not apply to for-sale posts by licensed gun dealers."
+   ],
+   "texts": [
+       "One of the biggest critiques of Facebooks role as a platform is its allowance of personal gun sales between two people online. But according to the New York Times, the company has finally taken steps to ban private person-to-person gun sales on both Facebook and Instagram. This is another, more deliberate step in Facebooks journey to curb its presence as one of the biggest websites for gun sales, following a 2014 decision tolimit their presence in news feeds, particularly to minors. The company has often been caught in the middle of gun control activists who believe the site is abetting potentially illegal sales of personal firearms and the pushback from gun enthusiasts who bristle at forms of censorship and regulation. But Facebook is shedding its image as an informal marketplace to actually become its own ecommerce platform. The company has been testing the ability to buy productson the site, and now invites users to store credit card information within the platform for easy purchase and personal transactions. Facebook isnt alone in this aspect when it comes to banning guns. Both Craigslist and Amazon have banned the sale of guns from their platforms, and EBay has a very strict policywhen dealing in the sale and transport of weapons and ammunition. For example, whole firearms cannot be sold on eBay, butparts of them can. As Facebook continues to delve into ecommerce, it is no surprise that it will take the steps its forerunners have already made. In turn, it will possibly kill one of the biggest ways people privately sell guns online.  Facebook Moves to Ban Private Gun Sales on Its Site [New York Times]",
+       "Advertisement Continue reading the main story Facebook is banning private sales of guns on its flagship social network and on its Instagram photo-sharing service, the company said late Friday. President Obama, state attorneys general and gun safety groups had increased pressure on the company to stop the flow of Facebook posts and Instagram messages offering guns for sale, often without background checks. Although Facebook has never been directly involved in gun sales, it has served as a forum for gun sales to be negotiated. The ban applies to private, person-to-person sales of guns, though not to posts by licensed gun dealers. Facebook already prohibits people from offering marijuana, pharmaceuticals and illegal drugs for sale, and is updating its policy to include guns. Over the last two years, more and more people have been using Facebook to discover products and to buy and sell things to one another, said Monika Bickert, Facebooks head of product policy, in a statement. We are continuing to develop, test and launch new products to make this experience even better for people and are updating our regulated goods policies to reflect this evolution. Facebook also took steps in 2014 to limit gun sales on its site and on Instagram, including by shielding minors from Facebook pages that advertised guns for sale. At the time, the social network was one of the worlds largest marketplaces for guns. Facebook has 1.59 billion monthly visitors.",
+       "Facebook cracks down on private gun sales Peer to peer sales that are coordinated  and maybe even paid for through  Facebook are nothing new. The social network makes it easy to get in contact with someone, share pictures, and thanks to that money sending feature added to Messenger not too long ago, even pay for an item. Among the things being sold privately through Facebook were firearms, something the social network has now explicitly banned. Facebook banned the private sale of firearms in a policy update today; this includes coordinating the sale of ammo through the social network, as well. In the past, private gun sales on Facebook had some restrictions based on age, reminders to follow the laws, and other things also presented when items like alcohol are sold. Anyone who posts a private firearm or ammo for sale on Facebook could have the post removed, assuming it is either detected by the social networks system or reported by someone. This is the first product to be banned from peer to peer sales; Facebook also bars prescription drug sales and marijuana sales. Said Facebooks global product policy head Monika Bickert: Over the last two years, more and more people have been using Facebook to discover products and to buy and sell things to one another. We are continuing to develop, test and launch new products to make this experience even better for people and are updating our regulated goods policies to reflect this evolution. The same ban is now in place for Instagram, as well. VIA: The Washington Post",
+       "Facebook has announced that it will ban users from coordinating private sales of firearms on the social network. Facebook CEO Mark Zuckerberg speaks at the F8 summit in San Francisco, California. Facebook in March 2015. (Photo: Josh Edelson, AFP/Getty Images) SAN FRANCISCO  Facebook is cracking down on private gun sales. The Menlo Park, Calif., company said late Friday it will ban users from coordinating private sales of firearms on the social network and on mobile app Instagram. The ban does not apply to licensed gun dealers for purchases completed off Facebook. President Obama and state attorneys general have increased pressure on Facebook to tighten restrictions on firearms because of the proliferation of posts that offer guns for sale, often without background checks. Facebook and Instagram users will no longer be able to offer or coordinate the private sale of firearms, gun parts and ammunition, the company said. That brings firearms in line with Facebook's ban on the private sales of marijuana, pharmaceuticals and illegal drugs. Users can't buy and sell guns on Facebook itself but gun enthusiasts often connect there and sometimes make arrangements to buy, sell and trade guns. In March 2014, Facebook took steps to limit sales of firearms including blocking minors from seeing posts about gun sales and trades and by requiring Facebook pages primarily used to promote the private sale of regulated goods and services to include language that reminds users to comply with laws and regulation. At the time, an investigation by the technology blog VentureBeat found that adults and children were connecting on Facebook pages devoted to guns to buy, sell and trade firearms, sometimes in violation of federal and state gun laws. Federal law enforcement sources told VentureBeat that Facebook, Instagram and other social media services were \"emerging threats for unlawful gun transactions in the United States.\" Moms Demand Action for Gun Sense in America and Mayors Against Illegal Guns, the group backed by former New York Mayor Michael Bloomberg, had stepped up their demands for changes to Facebook's policies after gun arrests were tied to sales of guns facilitated through Facebook. \"Over the last two years, more and more people have been using Facebook to discover products and to buy and sell things to one another. We are continuing to develop, test, and launch new products to make this experience even better for people and are updating our regulated goods policies to reflect this evolution,\" Monika Bickert, Facebook's head of product policy, said in an emailed statement. Follow USA TODAY senior technology writer Jessica Guynn@jguynn Read or Share this story: http://usat.ly/1SOZmCk",
+       "Facebook is banning private gun sales on its main social network and Instagram too. The Menlo Park, California-based company said Friday that it plans to stop person-to-person firearms sales on its networks. The ban, actually an update to a policy that already prohibits the sale of marijuana, pharmaceuticals, and illegal drugs, does not apply to for-sale posts by licensed gun dealers. The move comes after President Barack Obama earlier this month announced renewed efforts to curb gun violence, including expanded background checks and research into smart guns, which use radio signals or fingerprint scanners to ensure a weapon can be fired only by its owner. Though the president spoke passionately about the issue, the gun and technology industries have been slow to respond. Only one company was showing off new smart-gun technology during CES, the largest tech expo in the country, and none were doing so at the largest gun show. Both shows were held within days of Obama's speech. \"Over the last two years, more and more people have been using Facebook to discover products and to buy and sell things to one another,\" Monika Bickert, Facebook's head of product policy, said in a statement. \"We are continuing to develop, test and launch new products to make this experience even better for people and are updating our regulated-goods policies to reflect this evolution.\" This isn't the first time Facebook, which owns the Instagram photo-sharing social network, has pushed back against guns on its network. In 2014, the service said it would police posts designed to circumvent gun sales laws. \"We will not permit people to post offers to sell regulated items that indicate a willingness to evade or help others evade the law,\" Bickert said in a statement at the time. The New York Times first reported the gun sale ban. Update, 4:30 p.m. PT: Adds confirmation and details of the news from Facebook.",
+       "Social networking giant Facebook announced Friday that it would ban the private sale of guns on its site, and on its photo-sharing platform Instagram. Although the site itself does not act as a retailer of firearms, it has allowed users to sell guns on Facebook pages or in Instagram posts. The new prohibitions will affect only private and person-to-person sales, and not licensed gun sellers. Over the last two years, more and more people have been using Facebook to discover products and to buy and sell things to one another, said Monika Bickert, Facebooks head of product policy. We are continuing to develop, test and launch new products to make this experience even better for people and are updating our regulated goods policies to reflect this evolution. Those policies already prohibit trade in marijuana, prescription pills and other illicit substances. Firearms are now to be added to the list. A New York Times report cites increased pressure from the Obama administration and gun safety groups to stem the tide of posts soliciting guns as reason for Facebooks decision.",
+       "Facebook, the world's most popular social network, is cracking down on private gun sales. Facebook will no longer allow private individuals to buy and sell weapons on its network, including its Instagram photo-sharing service, a spokeswoman said Friday. \"It's important because it will save American lives, because people will not be able to sell guns to dangerous people in unfettered fashion, and it sends an incredibly strong cultural signal,\" Shannon Watts, a representative for Moms Demand Action for Gun Sense in America, told HuffPost in an email. \"Congress has not stood up to protect its constituents, but Facebook is stepping up to protect its users.\" Licensed firearms dealers will still be able to use Facebook to facilitate transactions, but not private individuals. Firearms have been easily traded on the social platform for years. As VentureBeat explained in 2014, the process takes about 15 minutes: Anyone, even a teenager, could theoretically find their way to one of \"dozens\" of online Facebook groups and arrange a purchase. Many of the person-to-person transactions are legitimate -- allowed under loopholes in gun laws. But as VentureBeat noted, it's all too easy for sketchy deals: For instance, you can buy automatic weapons without a permit, guns with their serial numbers filed off, and weapons that may be prohibited by your states laws. If youre under 18, you can buy a handgun, which federal law prohibits. On Tuesday, a VentureBeat reporter and his colleague spent less than 15 minutes arranging to buy a semiautomatic 7 mm rifle and 90 rounds of ammunition from a guy named Dave, a member of Facebook Firearms Only Alamogordo fan page. The New York Times reported earlier this month that gun sales by unlicensed dealers continue to happen on Facebook. That's about to change. \"Over the last two years, more and more people have been using Facebook to discover products and to buy and sell things to one another,\" Monika Bickert, Facebooks head of product policy, told HuffPost in an email. \"We are continuing to develop, test, and launch new products to make this experience even better for people and are updating our regulated goods policies to reflect this evolution.\" Meanwhile, gun violence rages. There were 372 mass shootings in the U.S. last year, killing 475 and wounding many more, according to PBS NewsHour. Earlier this week, HuffPost reported that U.S. shootings since 1963 have \"killed more Americans than all wars ever.\" Also on HuffPost:",
+       "Facebook says that its banning users from coordinating private sales of firearms on its social network. The move largely affect transactions that take place on the site, as the company will allow licensed retailers to advertise firearms on Facebook as long as the transactions take place outside of its platform. The ban applies to private, person-to-person sales of guns on Facebook and Instagram, but not to licensed gun dealers. Its a response to pressure coming from not only gun control advocates, but also President Obama and state attorneys general looking to restrict sales on one of the top sites on the Internet. The company says it has systems in place to review and remove content that violates our terms of service and advertising that is false, deceptive, or misleading. In a statement, Facebook head of product policy Monika Bickert said Over the last two years, more and more people have been using Facebook to discover products and to buy and sell things to one another. We are continuing to develop, test and launch new products to make this experience even better for people and are updating our regulated goods policies to reflect this evolution. This isnt the first time that Facebook has cracked down on firearms on the social networks. In 2014, it started to tighten policies on posts around illegal gun sales after being pressured by groups like the Mayors Against Illegal Guns and the Moms Demand Action. Its policy already prohibits people from offering marijuana, pharmaceuticals, and illegal drugs for sale. At the time, the company announced a series of educational and enforcement measures regarding guns and other regulated items on its platform. The policy update not only affected Facebooks core service, but also Instagram. As it stands, access to posts about gun sales and trade were limited to those 18 years or older, and it would require Facebook pages that are used to promote these sales to include language reminding administrators and sellers to comply with laws and regulations. In February 2014, VentureBeat conducted an investigation that uncovered dozens of pages on Facebook in 2014 where we learned that guns such as semi-automatic weapons, handguns, and silencers were posted for sale on the site. One of our reporters were able to purchase a semiautomatic rifle and ammunition in less than 15 minutes on the social network. More information: Facebook Facebook is the worlds largest social network, with over 1.39 billion monthly active users. Facebook was founded by Mark Zuckerberg in February 2004, initially as an exclusive network for Harvard students. It was a huge hit: in 2 we... read more  Powered by VBProfiles"
+   ],
+   "top_image": {
+     "low":"http://static01.nyt.com/images/2016/01/30/business/30facebook-web1alt/30facebook-web1alt-master675.jpg",
+     "original":"http://static01.nyt.com/images/2016/01/30/business/30facebook-web1alt/30facebook-web1alt-master675.jpg"
+   },
+   "tweets": [
+           {
+           "id": 48735758,
+           "text": "Holy Smoke! New Raspberry Pi Zero Costs Just $5… ",
+           "username": "@alicebonasio",
+           "blockquote": "<blockquote class=\"twitter-tweet\" lang=\"en\"><p lang=\"en\" dir=\"ltr\">Holy Smoke! New Raspberry Pi Zero Costs Just $5… <a href=\"https://t.co/Iwc0qS5KDW\">https://t.co/Iwc0qS5KDW</a> via <a href=\"https://twitter.com/TechCrunch\">@techcrunch</a></p>&mdash; Alice Bonasio (@alicebonasio) <a href=\"https://twitter.com/alicebonasio/status/674268807955922944\">December 8, 2015</a></blockquote>"
+           }
+           ],
+"quotes": [
+           {
+           "person": "John Doe",
+           "text": "Facebook test quote"
+           }
+           ],
+"products": [],
+"companies": [
+  {
+  "name": "Facebook",
+  "source_name": "wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Facebook",
+  "text": "Facebook is an online social networking service headquartered in Menlo Park, California. Its website was launched on February 4, 2004, by Mark Zuckerberg with his Harvard College roommates and fellow students Eduardo Saverin, Andrew McCollum, Dustin Moskovitz and Chris Hughes."
+  }
+],
+"people": [
+           {
+           "name": "Mark Zuckerberg",
+           "source_name": "wikipedia",
+           "source_url": "https://en.wikipedia.org/wiki/Mark_Zuckerberg",
+           "text": "Mark Elliot Zuckerberg (born May 14, 1984) is an American computer programmer, Internet entrepreneur, and philanthropist. He is the chairman, chief executive, and co-founder of the social networking website Facebook. His personal wealth, as of December 2015, is estimated to be $46 billion.",
+           "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Mark_Zuckerberg_at_the_37th_G8_Summit_in_Deauville_018_v1.jpg/440px-Mark_Zuckerberg_at_the_37th_G8_Summit_in_Deauville_018_v1.jpg",
+           }
+           ],
+"organizations": [],
+"locations": [
+              "San Francisco"
+              ]
+}
+]

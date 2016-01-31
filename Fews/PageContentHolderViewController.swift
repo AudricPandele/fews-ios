@@ -18,7 +18,6 @@ class PageContentHolderViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var nbOfSourceLeftLabel: UILabel!
-    @IBOutlet weak var eventDate: UILabel!
     
     var pageIndex: Int!
     var event: Event!

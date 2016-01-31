@@ -11,20 +11,20 @@ import SwiftyJSON
 import SwiftDate
 
 class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate, UIScrollViewDelegate {
+    var jsonDay: String!
+    var pageViewController: UIPageViewController!
+    var eventsList: EventsList = EventsList()
     
 //    var pageTopImages: NSArray! = []
 //    var pageTitles: NSArray! = []
 //    let imagesArray: NSMutableArray! = []
-
-    var pageViewController: UIPageViewController!
-    var JsonEntity: JsonObject = JsonObject(path: NSBundle.mainBundle().pathForResource("events2", ofType: "json") as String!)
-    var eventsList: EventsList = EventsList()
     
     @IBOutlet weak var loading: UILabel!
     var overlay : UIView?
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true);
+        
         UIApplication.sharedApplication().statusBarHidden=true;
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -51,8 +51,9 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
             }
         }
         
-        eventsList = self.JsonEntity.JsonToEventsList(eventsList)
-        NSLog("loll")
+        let JsonEntity: JsonObject = JsonObject(path: NSBundle.mainBundle().pathForResource(jsonDay, ofType: "json") as String!)
+        
+        eventsList = JsonEntity.JsonToEventsList(eventsList)
         eventsList.shuffle()
 
         self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController

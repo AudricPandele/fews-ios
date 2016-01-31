@@ -33,7 +33,7 @@ class ArticleTableViewController: UITableViewController {
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 7
+        return 8
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,6 +62,8 @@ class ArticleTableViewController: UITableViewController {
             cellIdentifier = "WikiCollectionCell"
         case 6:
             cellIdentifier = "TweetCollectionCell"
+        case 7:
+            cellIdentifier = "SourceCollectionCell"
             
         default: ()
         }
@@ -95,6 +97,9 @@ class ArticleTableViewController: UITableViewController {
         case "TweetCollectionCell":
             (cell as! TweetCollectionView).tweets = self.event.tweets
 
+        case "SourceCollectionCell":
+            (cell as! SourceCollectionView).articles = self.event.articles
+
         default: ()
         }
         
@@ -118,6 +123,8 @@ class ArticleTableViewController: UITableViewController {
             return 215
         case 6:
             return 215
+        case 7:
+            return 80
         default: ()
         return 200
         }
