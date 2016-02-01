@@ -758,7 +758,7 @@
                                     <outlet property="wikiCollectionView" destination="bBD-WS-1z8" id="its-ns-4g9"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCollectionCell" rowHeight="219" id="oej-aY-AYY" customClass="TweetCollectionView" customModule="Fews" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TweetCollectionCell" rowHeight="219" id="oej-aY-AYY" customClass="TweetCollectionView" customModule="Fews" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="1043" width="600" height="219"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oej-aY-AYY" id="MON-LP-eec">
