@@ -43,8 +43,6 @@
 		82B6C8FE1C3D076200C9A42A /* CitationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B6C8FD1C3D076200C9A42A /* CitationCell.swift */; };
 		82F569EA1C5E883A002D31DD /* 128.json in Resources */ = {isa = PBXBuildFile; fileRef = 82F569E61C5E883A002D31DD /* 128.json */; };
 		82F569EB1C5E883A002D31DD /* 129.json in Resources */ = {isa = PBXBuildFile; fileRef = 82F569E71C5E883A002D31DD /* 129.json */; };
-		82F569EC1C5E883A002D31DD /* 130.json in Resources */ = {isa = PBXBuildFile; fileRef = 82F569E81C5E883A002D31DD /* 130.json */; };
-		82F569ED1C5E883A002D31DD /* 131.json in Resources */ = {isa = PBXBuildFile; fileRef = 82F569E91C5E883A002D31DD /* 131.json */; };
 		82F569EF1C5E8F70002D31DD /* home.json in Resources */ = {isa = PBXBuildFile; fileRef = 82F569EE1C5E8F70002D31DD /* home.json */; };
 		D553BB9CF973668EC58E91CF /* Pods_Fews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2EA6F4D8A56272EC74C0890 /* Pods_Fews.framework */; };
 		EB1724EF1C219680000833F5 /* SwiftDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1724EE1C219680000833F5 /* SwiftDate.framework */; };
@@ -106,8 +104,6 @@
 		82B6C8FD1C3D076200C9A42A /* CitationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitationCell.swift; sourceTree = "<group>"; };
 		82F569E61C5E883A002D31DD /* 128.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 128.json; sourceTree = "<group>"; };
 		82F569E71C5E883A002D31DD /* 129.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 129.json; sourceTree = "<group>"; };
-		82F569E81C5E883A002D31DD /* 130.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 130.json; sourceTree = "<group>"; };
-		82F569E91C5E883A002D31DD /* 131.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 131.json; sourceTree = "<group>"; };
 		82F569EE1C5E8F70002D31DD /* home.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = home.json; sourceTree = "<group>"; };
 		E2EA6F4D8A56272EC74C0890 /* Pods_Fews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB1724EE1C219680000833F5 /* SwiftDate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDate.framework; path = "Pods/../build/Debug-iphoneos/SwiftDate.framework"; sourceTree = "<group>"; };
@@ -187,8 +183,6 @@
 				825D53651C5FF020000DE9B1 /* 127.json */,
 				82F569E61C5E883A002D31DD /* 128.json */,
 				82F569E71C5E883A002D31DD /* 129.json */,
-				82F569E81C5E883A002D31DD /* 130.json */,
-				82F569E91C5E883A002D31DD /* 131.json */,
 			);
 			name = Json;
 			sourceTree = "<group>";
@@ -319,7 +313,7 @@
 				TargetAttributes = {
 					82A8DA481C18247B00799225 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = SF6BSG34CG;
+						DevelopmentTeam = T6RB53DB8F;
 					};
 				};
 			};
@@ -351,9 +345,7 @@
 				82A8DA571C18247B00799225 /* LaunchScreen.storyboard in Resources */,
 				82A8DA541C18247B00799225 /* Assets.xcassets in Resources */,
 				825D53661C5FF020000DE9B1 /* 127.json in Resources */,
-				82F569EC1C5E883A002D31DD /* 130.json in Resources */,
 				82A8DA651C18309E00799225 /* Podfile in Resources */,
-				82F569ED1C5E883A002D31DD /* 131.json in Resources */,
 				82A8DA521C18247B00799225 /* Main.storyboard in Resources */,
 				82F569EA1C5E883A002D31DD /* 128.json in Resources */,
 			);
@@ -571,7 +563,7 @@
 				);
 				INFOPLIST_FILE = Fews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = audric.Fews;
+				PRODUCT_BUNDLE_IDENTIFIER = clement.Fews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Fews/Fews-Bridging-Header.h";
@@ -593,7 +585,7 @@
 				);
 				INFOPLIST_FILE = Fews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = audric.Fews;
+				PRODUCT_BUNDLE_IDENTIFIER = clement.Fews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Fews/Fews-Bridging-Header.h";
