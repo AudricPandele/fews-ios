@@ -2,8 +2,8 @@
 //  PhotoDetailViewController.swift
 //  Fews
 //
-//  Created by Audric Pandelé on 01/02/2016.
-//  Copyright © 2016 Audric Pandelé. All rights reserved.
+//  Created by Pierre Brethes on 01/02/2016.
+//  Copyright © 2016 Pierre Brethes. All rights reserved.
 //
 
 import UIKit

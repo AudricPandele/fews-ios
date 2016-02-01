@@ -86,9 +86,6 @@ class JsonObject: NSObject {
     }
     
     func JsonToTopImage(event: JSON) -> TopImage {
-        NSLog("\(event["top_image"])")
-        NSLog(event["top_image"]["low"].string!)
-        NSLog(event["top_image"]["original"].string!)
         return TopImage(low: event["top_image"]["low"].string!, original: event["top_image"]["original"].string!)
     }
     
@@ -126,8 +123,6 @@ class JsonObject: NSObject {
                 if (product["source_name"] == "wikipedia"){
                     
                     let wikipedia: WikipediaObject = WikipediaObject(name: product["name"].string!, source_url: product["source_url"].string!, text: product["text"].string!, photo: default_photo, twitter: default_twitter)
-                    
-//                    NSLog("\(wikipedia)")
                     wikipedias.append(wikipedia)
                 }
             }

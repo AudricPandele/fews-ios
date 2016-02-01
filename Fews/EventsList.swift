@@ -24,11 +24,8 @@ class EventsList: NSObject {
     
     func find(index: Int) -> Event {
         if index <= self.lenght() {
-            NSLog("\(self.events[index])")
             return self.events[index]
         } else {
-            NSLog("\(index)")
-            NSLog("\(self.lenght())")
             fatalError("Index out of range")
         }
     }
