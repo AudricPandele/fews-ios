@@ -26,6 +26,10 @@ class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let logo = UIImage(named: "header_fews.png")
+        let imageView = UIImageView(image:logo)
+        self.navigationItem.titleView = imageView
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -48,7 +52,7 @@ class TableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4
+        return 3
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
@@ -63,30 +67,37 @@ class TableViewController: UITableViewController {
         
         switch indexPath.row {
         case 0:
-            (cell as! DaysTableViewCell).daysLabel.text = "January 31"
-        case 1:
-            (cell as! DaysTableViewCell).daysLabel.text = "January 30"
-        case 2:
             (cell as! DaysTableViewCell).daysLabel.text = "January 29"
-        case 3:
+        case 1:
             (cell as! DaysTableViewCell).daysLabel.text = "January 28"
-            
+        case 2:
+            (cell as! DaysTableViewCell).daysLabel.text = "January 27"
+ 
         default:()
         }
         return cell
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let date = NSDate()
-        let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components([.Day , .Month , .Year], fromDate: date)
-        
-        let month = components.month
-        let day = components.day
+//        let date = NSDate()
+//        let calendar = NSCalendar.currentCalendar()
+//        let components = calendar.components([.Day , .Month , .Year], fromDate: date)
+//        
+//        let month = components.month
+//        let day = components.day
 
         if let navVC = segue.destinationViewController as? ViewController{
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                navVC.jsonDay = "\(month)\(day-indexPath.row)"
+                switch indexPath.row {
+                case 0:
+                    navVC.jsonDay = "129"
+                case 1:
+                    navVC.jsonDay = "128"
+                case 2:
+                    navVC.jsonDay = "127"
+                    
+                default:()
+                }
             }
         }
     }

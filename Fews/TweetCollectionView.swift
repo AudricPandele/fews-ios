@@ -28,7 +28,10 @@ extension TweetCollectionView: UICollectionViewDelegate, UICollectionViewDataSou
         (cell as! TweetCollectionViewCell).layer.cornerRadius = 5
         (cell as! TweetCollectionViewCell).username_label.textColor = UIColor.FewsTwitterColor()
         (cell as! TweetCollectionViewCell).username_label.text = tweets[indexPath.row].user_name
+        (cell as! TweetCollectionViewCell).nameLabel.textColor = UIColor.FewsTwitterColor()
+        (cell as! TweetCollectionViewCell).nameLabel.text = tweets[indexPath.row].name
         (cell as! TweetCollectionViewCell).textLabel.text = tweets[indexPath.row].text
+        (cell as! TweetCollectionViewCell).url = tweets[indexPath.row].link
         
         return cell
     }

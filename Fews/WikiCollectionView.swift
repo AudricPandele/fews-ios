@@ -29,6 +29,7 @@ extension WikiCollectionView: UICollectionViewDelegate, UICollectionViewDataSour
         (cell as! WikiCollectionViewCell).layer.cornerRadius = 5
         (cell as! WikiCollectionViewCell).titleLabel.text = wikipedias[indexPath.row].name
         (cell as! WikiCollectionViewCell).textLabel.text = wikipedias[indexPath.row].text
+        (cell as! WikiCollectionViewCell).url = wikipedias[indexPath.row].source_url
         
         return cell
     }

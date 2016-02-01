@@ -25,6 +25,10 @@ class AboutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let logo = UIImage(named: "header_fews.png")
+        let imageView = UIImageView(image:logo)
+        self.navigationItem.titleView = imageView
 
         // Do any additional setup after loading the view.
     }

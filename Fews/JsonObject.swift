@@ -74,7 +74,6 @@ class JsonObject: NSObject {
             textList.append(ArrayToString(summary1))
             textList.append(ArrayToString(summary2))
         }
-        NSLog("\(textList)")
         return textList
     }
     
@@ -87,6 +86,9 @@ class JsonObject: NSObject {
     }
     
     func JsonToTopImage(event: JSON) -> TopImage {
+        NSLog("\(event["top_image"])")
+        NSLog(event["top_image"]["low"].string!)
+        NSLog(event["top_image"]["original"].string!)
         return TopImage(low: event["top_image"]["low"].string!, original: event["top_image"]["original"].string!)
     }
     
@@ -105,7 +107,7 @@ class JsonObject: NSObject {
         
         if let tweets = event["tweets"].array {
             for tweet in tweets {
-                let new_tweet: TweetObject = TweetObject(text: tweet["text"].string!, user_name: tweet["username"].string!)
+                let new_tweet: TweetObject = TweetObject(text: tweet["text"].string!, user_name: tweet["username"].string!, name: tweet["name"].string!, link: tweet["link"].string!)
                 
                 tweetsTab.append(new_tweet)
             }

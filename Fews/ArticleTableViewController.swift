@@ -33,7 +33,7 @@ class ArticleTableViewController: UITableViewController {
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 8
+        return 9
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,10 +59,12 @@ class ArticleTableViewController: UITableViewController {
         case 4:
             cellIdentifier = "MapCollectionCell"
         case 5:
-            cellIdentifier = "WikiCollectionCell"
+            cellIdentifier = "GalleryCollectionCell"
         case 6:
-            cellIdentifier = "TweetCollectionCell"
+            cellIdentifier = "WikiCollectionCell"
         case 7:
+            cellIdentifier = "TweetCollectionCell"
+        case 8:
             cellIdentifier = "SourceCollectionCell"
             
         default: ()
@@ -91,6 +93,9 @@ class ArticleTableViewController: UITableViewController {
         case "MapCollectionCell":
             (cell as! TableViewCell).event = self.event
             
+        case "GalleryCollectionCell":
+            (cell as! GalleryCollectionView).images = self.event.images
+            
         case "WikiCollectionCell":
             (cell as! WikiCollectionView).wikipedias = self.event.wikipedias
 
@@ -112,18 +117,20 @@ class ArticleTableViewController: UITableViewController {
         case 0:
             return 300
         case 1:
-            return 230
+            return 250
         case 2:
-            return 120
+            return 130
         case 3:
-            return 230
+            return 250
         case 4:
             return 215
         case 5:
-            return 215
+            return 105
         case 6:
             return 215
         case 7:
+            return 215
+        case 8:
             return 80
         default: ()
         return 200

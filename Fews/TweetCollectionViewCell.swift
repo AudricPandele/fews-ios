@@ -9,6 +9,14 @@
 import UIKit
 
 class TweetCollectionViewCell: UICollectionViewCell {
+    var url: String!
+    
+    @IBAction func openURL(sender: AnyObject) {
+        if let link = NSURL(string: url) {
+            UIApplication.sharedApplication().openURL(link)
+        }
+    }
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var username_label: UILabel!
     @IBOutlet weak var textLabel: UILabel!
 }

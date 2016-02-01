@@ -21,6 +21,10 @@
 		82480E621C5E725C00CC19E7 /* SourceCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82480E611C5E725C00CC19E7 /* SourceCollectionView.swift */; };
 		82480E641C5E732C00CC19E7 /* SourceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82480E631C5E732C00CC19E7 /* SourceCollectionViewCell.swift */; };
 		82480E661C5E7B4400CC19E7 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82480E651C5E7B4400CC19E7 /* AboutViewController.swift */; };
+		825D53601C5FBD07000DE9B1 /* GalleryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825D535F1C5FBD07000DE9B1 /* GalleryCollectionView.swift */; };
+		825D53621C5FBE03000DE9B1 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825D53611C5FBE03000DE9B1 /* GalleryCollectionViewCell.swift */; };
+		825D53641C5FC27F000DE9B1 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825D53631C5FC27F000DE9B1 /* PhotoDetailViewController.swift */; };
+		825D53661C5FF020000DE9B1 /* 127.json in Resources */ = {isa = PBXBuildFile; fileRef = 825D53651C5FF020000DE9B1 /* 127.json */; };
 		82680D331C2020190056EC7E /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82680D321C2020190056EC7E /* ImageCell.swift */; };
 		828383F11C201C3A00A774E1 /* ArticleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828383F01C201C3A00A774E1 /* ArticleTableViewController.swift */; };
 		829D5CF01C592D24008EC4B5 /* WikiCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829D5CEF1C592D24008EC4B5 /* WikiCollectionView.swift */; };
@@ -78,6 +82,10 @@
 		82480E611C5E725C00CC19E7 /* SourceCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceCollectionView.swift; sourceTree = "<group>"; };
 		82480E631C5E732C00CC19E7 /* SourceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceCollectionViewCell.swift; sourceTree = "<group>"; };
 		82480E651C5E7B4400CC19E7 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		825D535F1C5FBD07000DE9B1 /* GalleryCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCollectionView.swift; sourceTree = "<group>"; };
+		825D53611C5FBE03000DE9B1 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		825D53631C5FC27F000DE9B1 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		825D53651C5FF020000DE9B1 /* 127.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 127.json; sourceTree = "<group>"; };
 		82680D321C2020190056EC7E /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		828383F01C201C3A00A774E1 /* ArticleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewController.swift; sourceTree = "<group>"; };
 		829D5CEF1C592D24008EC4B5 /* WikiCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikiCollectionView.swift; sourceTree = "<group>"; };
@@ -154,16 +162,18 @@
 		821031681C20542F00E46A5B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				82480E4C1C5D5E0600CC19E7 /* DaysTableViewCell.swift */,
+				825D535F1C5FBD07000DE9B1 /* GalleryCollectionView.swift */,
+				825D53611C5FBE03000DE9B1 /* GalleryCollectionViewCell.swift */,
 				82480E611C5E725C00CC19E7 /* SourceCollectionView.swift */,
 				82480E631C5E732C00CC19E7 /* SourceCollectionViewCell.swift */,
-				82480E4C1C5D5E0600CC19E7 /* DaysTableViewCell.swift */,
+				829D5CEF1C592D24008EC4B5 /* WikiCollectionView.swift */,
 				823872D41C4F8B50000BB097 /* WikiCollectionViewCell.swift */,
 				823872D21C4F8A15000BB097 /* MapCollectionViewCell.swift */,
 				823872D01C4F80D8000BB097 /* TableViewCell.swift */,
+				829D5CF31C5A536A008EC4B5 /* TweetCollectionView.swift */,
 				829D5CF51C5A53DB008EC4B5 /* TweetCollectionViewCell.swift */,
 				82680D321C2020190056EC7E /* ImageCell.swift */,
-				829D5CEF1C592D24008EC4B5 /* WikiCollectionView.swift */,
-				829D5CF31C5A536A008EC4B5 /* TweetCollectionView.swift */,
 				829D7DD31C202ED2009F21C5 /* TextCell.swift */,
 				82B6C8FD1C3D076200C9A42A /* CitationCell.swift */,
 			);
@@ -174,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				82F569EE1C5E8F70002D31DD /* home.json */,
+				825D53651C5FF020000DE9B1 /* 127.json */,
 				82F569E61C5E883A002D31DD /* 128.json */,
 				82F569E71C5E883A002D31DD /* 129.json */,
 				82F569E81C5E883A002D31DD /* 130.json */,
@@ -192,6 +203,7 @@
 				82480E4E1C5D670000CC19E7 /* TableViewController.swift */,
 				82A8DA601C1828AA00799225 /* PageContentHolderViewController.swift */,
 				828383F01C201C3A00A774E1 /* ArticleTableViewController.swift */,
+				825D53631C5FC27F000DE9B1 /* PhotoDetailViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -338,6 +350,7 @@
 				82F569EF1C5E8F70002D31DD /* home.json in Resources */,
 				82A8DA571C18247B00799225 /* LaunchScreen.storyboard in Resources */,
 				82A8DA541C18247B00799225 /* Assets.xcassets in Resources */,
+				825D53661C5FF020000DE9B1 /* 127.json in Resources */,
 				82F569EC1C5E883A002D31DD /* 130.json in Resources */,
 				82A8DA651C18309E00799225 /* Podfile in Resources */,
 				82F569ED1C5E883A002D31DD /* 131.json in Resources */,
@@ -404,11 +417,13 @@
 				823872D71C4FC787000BB097 /* WikipediaObject.swift in Sources */,
 				EBDD9B6D1C20D1E300434A40 /* EventsList.swift in Sources */,
 				823872D11C4F80D8000BB097 /* TableViewCell.swift in Sources */,
+				825D53641C5FC27F000DE9B1 /* PhotoDetailViewController.swift in Sources */,
 				EB67A9B81C260A3A006D0A85 /* UIColor.swift in Sources */,
 				829D5CF21C5A517C008EC4B5 /* TweetObject.swift in Sources */,
 				823872D31C4F8A15000BB097 /* MapCollectionViewCell.swift in Sources */,
 				EBDD9B671C20C25D00434A40 /* Event.swift in Sources */,
 				82480E621C5E725C00CC19E7 /* SourceCollectionView.swift in Sources */,
+				825D53601C5FBD07000DE9B1 /* GalleryCollectionView.swift in Sources */,
 				823872D51C4F8B50000BB097 /* WikiCollectionViewCell.swift in Sources */,
 				82480E641C5E732C00CC19E7 /* SourceCollectionViewCell.swift in Sources */,
 				82480E601C5D707000CC19E7 /* UIViewController+MMDrawerController.m in Sources */,
@@ -421,6 +436,7 @@
 				828383F11C201C3A00A774E1 /* ArticleTableViewController.swift in Sources */,
 				82A8DA611C1828AA00799225 /* PageContentHolderViewController.swift in Sources */,
 				EBDD9B711C20E2C600434A40 /* TopImage.swift in Sources */,
+				825D53621C5FBE03000DE9B1 /* GalleryCollectionViewCell.swift in Sources */,
 				EB3C5F491C1C782C004C7C13 /* JsonObject.swift in Sources */,
 				82480E511C5D6FA000CC19E7 /* MenuViewController.swift in Sources */,
 				829D7DD41C202ED2009F21C5 /* TextCell.swift in Sources */,
